@@ -1,14 +1,23 @@
-import Achievements from "@/components/achievements/Achievements";
-import ExpandableCardDemo from "@/components/our-edge/ExpandableCardDemo";
-import Hero from "@/components/hero/Hero";
-import Navbar from "@/components/navbar/Navbar";
-import { OurStory } from "@/components/ourstory/OurStory";
-import Partners from "@/components/partners/Partners";
-import TheySay from "@/components/they-say/TheySay";
-import OurMix from "@/components/our-mix/OurMix";
-import OurValues from "@/components/our-values/OurValues";
-import { ContactDetails } from "@/components/contact-details/ContactDetails";
-import { GetInTouch } from "@/components/contact-us/GetInTouch";
+// import React, { useEffect, useState } from "react";
+import dynamic from "next/dynamic";
+
+const Navbar = dynamic(() => import("@/components/navbar/Navbar"));
+const Hero = dynamic(() => import("@/components/hero/Hero"));
+const OurStory = dynamic(() => import("@/components/ourstory/OurStory"));
+const Achievements = dynamic(
+  () => import("@/components/achievements/Achievements")
+);
+const TheySay = dynamic(() => import("@/components/they-say/TheySay"));
+const ExpandableCardDemo = dynamic(
+  () => import("@/components/our-edge/ExpandableCardDemo")
+);
+const Partners = dynamic(() => import("@/components/partners/Partners"));
+const OurMix = dynamic(() => import("@/components/our-mix/OurMix"));
+const OurValues = dynamic(() => import("@/components/our-values/OurValues"));
+const ContactDetails = dynamic(
+  () => import("@/components/contact-details/ContactDetails")
+);
+const GetInTouch = dynamic(() => import("@/components/contact-us/GetInTouch"));
 
 export default function Home() {
   return (

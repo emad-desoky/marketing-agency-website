@@ -20,9 +20,9 @@ export const cards = [
     ),
   },
   {
-    description: "Babbu Maan",
-    title: "Mitran Di Chhatri",
-    src: "https://assets.aceternity.com/demos/babbu-maan.jpeg",
+    description: "Retail Shops Branding",
+    title: "BTL ADVERTISING",
+    src: "/Retail.jpg",
     ctaText: "Visit",
     ctaLink: "https://ui.aceternity.com/templates",
     content: () => (
@@ -41,7 +41,7 @@ export const cards = [
   {
     description: "Metallica",
     title: "For Whom The Bell Tolls",
-    src: "https://assets.aceternity.com/demos/metallica.jpeg",
+    src: "/digital.jpg",
     ctaText: "Visit",
     ctaLink: "https://ui.aceternity.com/templates",
     content: () => (
@@ -61,7 +61,7 @@ export const cards = [
   {
     description: "Lord Himesh",
     title: "Aap Ka Suroor",
-    src: "https://assets.aceternity.com/demos/aap-ka-suroor.jpeg",
+    src: "/printing.jpg",
     ctaText: "Visit",
     ctaLink: "https://ui.aceternity.com/templates",
     content: () => (
@@ -80,7 +80,7 @@ export const cards = [
   {
     description: "Lord Himesh",
     title: "Aap Ka Suroor",
-    src: "https://assets.aceternity.com/demos/aap-ka-suroor.jpeg",
+    src: "https://cloudinary.hbs.edu/hbsit/image/upload/s--jcW2HPqC--/f_auto,c_fill,h_375,w_750,/v20200101/EA99CC738B99D0AA67987EC2976D550F.jpg",
     ctaText: "Visit",
     ctaLink: "https://ui.aceternity.com/templates",
     content: () => (
@@ -99,7 +99,7 @@ export const cards = [
   {
     description: "Lord Himesh",
     title: "Aap Ka Suroor",
-    src: "https://assets.aceternity.com/demos/aap-ka-suroor.jpeg",
+    src: "https://cloudinary.hbs.edu/hbsit/image/upload/s--jcW2HPqC--/f_auto,c_fill,h_375,w_750,/v20200101/EA99CC738B99D0AA67987EC2976D550F.jpg",
     ctaText: "Visit",
     ctaLink: "https://ui.aceternity.com/templates",
     content: () => (
@@ -118,7 +118,7 @@ export const cards = [
   {
     description: "Lord Himesh",
     title: "Aap Ka Suroor",
-    src: "https://assets.aceternity.com/demos/aap-ka-suroor.jpeg",
+    src: "https://cloudinary.hbs.edu/hbsit/image/upload/s--jcW2HPqC--/f_auto,c_fill,h_375,w_750,/v20200101/EA99CC738B99D0AA67987EC2976D550F.jpg",
     ctaText: "Visit",
     ctaLink: "https://ui.aceternity.com/templates",
     content: () => (
@@ -137,7 +137,7 @@ export const cards = [
   {
     description: "Lord Himesh",
     title: "Aap Ka Suroor",
-    src: "https://assets.aceternity.com/demos/aap-ka-suroor.jpeg",
+    src: "https://cloudinary.hbs.edu/hbsit/image/upload/s--jcW2HPqC--/f_auto,c_fill,h_375,w_750,/v20200101/EA99CC738B99D0AA67987EC2976D550F.jpg",
     ctaText: "Visit",
     ctaLink: "https://ui.aceternity.com/templates",
     content: () => (

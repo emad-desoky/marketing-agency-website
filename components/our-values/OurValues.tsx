@@ -21,7 +21,10 @@ const OurValues: React.FC = () => {
   ];
 
   return (
-    <div className="bg-[rgb(43,43,43)] py-12 flex justify-center">
+    <div
+      id="OurValues"
+      className="bg-[rgb(43,43,43)] py-12 flex justify-center"
+    >
       <div className="relative z-20 flex flex-col md:flex-row w-11/12 lg:w-3/4 xl:w-2/3 bg-gray-900 rounded-lg shadow-lg overflow-hidden">
         {/* Left side (fixed) */}
         <div className="w-full md:w-1/4 bg-[rgb(43,43,43)] border-4 border-gray-950 flex items-center justify-start md:justify-center ">

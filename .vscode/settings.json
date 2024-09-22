@@ -1,5 +1,8 @@
 {
-  "cSpell.words": ["tailwindcss"],
+  "cSpell.words": [
+    "calsans",
+    "tailwindcss"
+  ],
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
