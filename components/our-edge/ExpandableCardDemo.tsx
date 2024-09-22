@@ -3,6 +3,8 @@ import React, { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useOutsideClick } from "@/hooks/useOutsideClick";
 import { cards } from "./Cards"; // Adjust the path as necessary
+import { Boxes } from "../ui/background-boxes"; // Import Boxes component
+import { cn } from "@/lib/utils"; // Import utility function if needed
 
 export default function ExpandableCardDemo() {
   const [active, setActive] = useState<(typeof cards)[number] | null>(null);
@@ -25,10 +27,16 @@ export default function ExpandableCardDemo() {
   useOutsideClick(ref, () => setActive(null));
 
   return (
-    <div className="bg-[rgb(17,24,39)] min-h-screen flex items-center justify-center">
-      <div className="flex">
-        <motion.div className="bg-[rgb(17,24,45)] dark:bg-neutral-900 rounded-5xl shadow-lg w-[500px] h-[520px] flex items-center justify-center mr-4 mt-10">
-          <h2 className="text-2xl font-bold text-white dark:text-neutral-200">
+    <div className="relative min-h-screen overflow-hidden">
+      <div className="absolute inset-0 z-0">
+        <div className="h-full w-full bg-[rgb(255,228,0)] flex flex-col items-center justify-center rounded-lg">
+          <div className="absolute inset-0 w-full h-full bg-[rgb(255,228,0)] z-0 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
+          <Boxes /> {/* Add the Boxes component here */}
+        </div>
+      </div>
+      <div className="relative z-10 flex items-center justify-center">
+        <motion.div className="bg-[rgb(43,43,43)] opacity-95 rounded-5xl shadow-lg w-[500px] h-[520px] flex items-center justify-center mr-4 mt-10 border-4 border-gray-800">
+          <h2 className="text-[100px] px-[120px] font-bold text-black dark:text-neutral-200">
             OUR EDGE
           </h2>
         </motion.div>
@@ -118,30 +126,41 @@ export default function ExpandableCardDemo() {
             )}
           </AnimatePresence>
           <ul className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {cards.map((card) => (
-              <motion.li
-                key={card.title}
-                layout
-                onClick={() => setActive(card)}
-                className="relative flex flex-col items-center justify-center cursor-pointer overflow-hidden bg-black dark:bg-neutral-900 rounded-3xl shadow-lg border border-neutral-700 dark:border-neutral-800 transition-all duration-300 hover:bg-stone-600 dark:hover:bg-neutral-800"
-              >
-                <Image
-                  src={card.src}
-                  alt={card.title}
-                  width={200}
-                  height={200}
-                  className="w-full h-40 object-cover transition-opacity duration-300 rounded-3xl"
-                />
-                <div className="relative z-10 flex flex-col items-center p-2">
-                  <h3 className="text-lg font-semibold text-white dark:text-neutral-200 text-center">
-                    {card.title}
-                  </h3>
-                  <p className="text-sm text-neutral-600 dark:text-neutral-400 text-center mt-1">
-                    {card.description}
-                  </p>
-                </div>
-              </motion.li>
-            ))}
+            {cards.map((card, index) => {
+              const row = Math.floor(index / 4); // Assuming 4 cards per row
+              const col = index % 4;
+
+              const bgColor =
+                (row % 2 === 0 && col % 2 === 0) ||
+                (row % 2 === 1 && col % 2 === 1)
+                  ? "bg-[rgb(0,0,0)]"
+                  : "bg-[rgb(43,43,43)]";
+
+              return (
+                <motion.li
+                  key={card.title}
+                  layout
+                  onClick={() => setActive(card)}
+                  className={`relative flex flex-col items-center justify-center cursor-pointer overflow-hidden rounded-3xl shadow-lg border border-neutral-700 dark:border-neutral-800 transition-all duration-300 transform hover:scale-110 hover:shadow-xl ${bgColor}`}
+                >
+                  <Image
+                    src={card.src}
+                    alt={card.title}
+                    width={200}
+                    height={200}
+                    className="w-full h-40 object-cover transition-opacity duration-300 rounded-3xl"
+                  />
+                  <div className="relative z-10 flex flex-col items-center p-2">
+                    <h3 className="text-lg font-semibold text-white dark:text-neutral-200 text-center">
+                      {card.title}
+                    </h3>
+                    <p className="text-sm text-[rgb(255,228,0)] font-bold dark:text-neutral-400 text-center mt-1">
+                      {card.description}
+                    </p>
+                  </div>
+                </motion.li>
+              );
+            })}
           </ul>
         </div>
       </div>

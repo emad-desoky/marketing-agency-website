@@ -7,6 +7,8 @@ import Partners from "@/components/partners/Partners";
 import TheySay from "@/components/they-say/TheySay";
 import OurMix from "@/components/our-mix/OurMix";
 import OurValues from "@/components/our-values/OurValues";
+import { ContactDetails } from "@/components/contact-details/ContactDetails";
+import { GetInTouch } from "@/components/contact-us/GetInTouch";
 
 export default function Home() {
   return (
@@ -20,6 +22,8 @@ export default function Home() {
       <Partners />
       <OurMix />
       <OurValues />
+      <ContactDetails />
+      <GetInTouch />
     </>
   );
 }

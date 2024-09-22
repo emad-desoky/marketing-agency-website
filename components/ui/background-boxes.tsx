@@ -21,6 +21,8 @@ export const BoxesCore: React.FC<BoxesCoreProps> = ({ className, ...rest }) => {
     "--blue-300",
     "--indigo-300",
     "--violet-300",
+    "--dark-gray-300", // Custom property for rgb(43, 43, 43)
+    "--yellow-bright-300",
   ];
 
   const getRandomColor = () => {
