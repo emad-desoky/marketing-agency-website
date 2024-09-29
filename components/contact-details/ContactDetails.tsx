@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import { Boxes } from "../ui/background-boxes"; // If you want to keep the boxes effect, otherwise you can remove this import.
 import { cn } from "@/lib/utils";
 
 const ContactDetails: React.FC = () => {

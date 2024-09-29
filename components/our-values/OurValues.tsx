@@ -8,7 +8,6 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
 // Register the required modules
 import SwiperCore from "swiper";
-import { px } from "framer-motion";
 SwiperCore.use([Autoplay, Navigation, Pagination]);
 
 const OurValues: React.FC = () => {
