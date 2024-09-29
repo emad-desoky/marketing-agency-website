@@ -1,9 +1,8 @@
-import type { Config } from "tailwindcss";
-import defaultTheme from "tailwindcss/defaultTheme";
-import colors from "tailwindcss/colors";
+import type { Config, PluginAPI } from "tailwindcss/types/config";
 import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette";
+import tailwindcssAnimate from "tailwindcss-animate"; // Replace require with import
 
-const addVariablesForColors = ({ addBase, theme }: { addBase: any; theme: any }) => {
+const addVariablesForColors = ({ addBase, theme }: PluginAPI) => {
   const allColors = flattenColorPalette(theme("colors"));
   const newVars = Object.fromEntries(
     Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
@@ -32,7 +31,6 @@ const config: Config = {
       },
     },
     extend: {
-      // Adding custom keyframes and animations
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
@@ -47,35 +45,28 @@ const config: Config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
-      // Adding custom font family
       fontFamily: {
-        nourd: ['Nourd', 'sans-serif'], // Add the Nourd font family here
+        nourd: ['Nourd', 'sans-serif'],
       },
-      // Defining font weights
       fontWeight: {
-        light: 300,
-        regular: 400,
-        medium: 500,
-        semibold: 600,
-        bold: 700,
-        heavy: 800,
+        light: "300",
+        regular: "400",
+        medium: "500",
+        semibold: "600",
+        bold: "700",
+        heavy: "800",
       },
-      // Custom letter spacing and line height
       letterSpacing: {
-        'custom-negative': '-74px', // Custom letter spacing
+        'custom-negative': '-74px',
       },
       lineHeight: {
-        'tight': '1', // Custom line height
-      },
-      // Extend colors if needed
-      colors: {
-        // Define custom colors here if needed
+        tight: '1',
       },
     },
   },
   plugins: [
-    require("tailwindcss-animate"),
-    addVariablesForColors, // Adding the color variables plugin here
+    tailwindcssAnimate, // Replaced require with imported variable
+    addVariablesForColors,
   ],
 };
 
