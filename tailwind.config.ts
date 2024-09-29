@@ -3,7 +3,7 @@ import defaultTheme from "tailwindcss/defaultTheme";
 import colors from "tailwindcss/colors";
 import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette";
 
-const addVariablesForColors = ({ addBase, theme }: { addBase: any, theme: any }) => {
+const addVariablesForColors = ({ addBase, theme }: { addBase: any; theme: any }) => {
   const allColors = flattenColorPalette(theme("colors"));
   const newVars = Object.fromEntries(
     Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
@@ -15,7 +15,7 @@ const addVariablesForColors = ({ addBase, theme }: { addBase: any, theme: any })
 };
 
 const config: Config = {
-  darkMode: ["class"],
+  darkMode: ["class"], // Enable dark mode using the 'class' strategy
   content: [
     './pages/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',
@@ -32,6 +32,7 @@ const config: Config = {
       },
     },
     extend: {
+      // Adding custom keyframes and animations
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
@@ -45,6 +46,30 @@ const config: Config = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+      },
+      // Adding custom font family
+      fontFamily: {
+        nourd: ['Nourd', 'sans-serif'], // Add the Nourd font family here
+      },
+      // Defining font weights
+      fontWeight: {
+        light: 300,
+        regular: 400,
+        medium: 500,
+        semibold: 600,
+        bold: 700,
+        heavy: 800,
+      },
+      // Custom letter spacing and line height
+      letterSpacing: {
+        'custom-negative': '-74px', // Custom letter spacing
+      },
+      lineHeight: {
+        'tight': '1', // Custom line height
+      },
+      // Extend colors if needed
+      colors: {
+        // Define custom colors here if needed
       },
     },
   },

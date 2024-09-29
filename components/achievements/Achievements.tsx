@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 
 const achievementsData = [
@@ -39,26 +39,58 @@ const Achievements = () => {
 
 const Counter = ({ target }: { target: number }) => {
   const [count, setCount] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    let start = 0; // Start from 0
-    const end = target;
-    const duration = 0.1; // 4 seconds in milliseconds
-    const incrementTime = duration / 1; // Update every incrementTime milliseconds
-
-    const interval = setInterval(() => {
-      if (start < end) {
-        start++;
-        setCount(start);
-      } else {
-        clearInterval(interval);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+          }
+        });
+      },
+      {
+        threshold: 0.1, // Trigger when 10% of the section is visible
       }
-    }, incrementTime);
+    );
 
-    return () => clearInterval(interval);
-  }, [target]);
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
 
-  return <h1 className="text-4xl font-bold text-[rgb(255,228,0)]">{count}</h1>; // Updated color
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    if (isVisible) {
+      let start = 0; // Start from 0
+      const end = target;
+      const duration = 2000; // Duration in milliseconds
+      const incrementTime = Math.floor(duration / end); // Update time based on target
+
+      const interval = setInterval(() => {
+        if (start < end) {
+          start++;
+          setCount(start);
+        } else {
+          clearInterval(interval);
+        }
+      }, incrementTime);
+    }
+  }, [isVisible, target]);
+
+  return (
+    <div ref={ref}>
+      <h1 className="text-4xl font-bold text-[rgb(255,228,0)]">{count}</h1>{" "}
+      {/* Updated color */}
+    </div>
+  );
 };
 
 export default Achievements;

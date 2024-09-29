@@ -3,7 +3,6 @@ import React, { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useOutsideClick } from "@/hooks/useOutsideClick";
 import { cards } from "./Cards"; // Adjust the path as necessary
-import { Boxes } from "../ui/background-boxes"; // Import Boxes component
 
 export default function ExpandableCardDemo() {
   const [active, setActive] = useState<(typeof cards)[number] | null>(null);
@@ -25,24 +24,16 @@ export default function ExpandableCardDemo() {
 
   useOutsideClick(ref, () => setActive(null));
 
-  const backgroundGradient =
-    "bg-gradient-to-r from-[rgb(43,43,43)] via-[rgb(255,228,0)] to-[rgb(43,43,43)]";
   const cardClass =
     "relative flex flex-col items-center justify-center cursor-pointer overflow-hidden rounded-3xl shadow-lg border border-neutral-700 dark:border-neutral-800 transition-all duration-300 transform hover:scale-110 hover:shadow-xl";
 
   return (
-    <div id="OurEdge" className="relative min-h-screen overflow-hidden">
-      <div className="absolute inset-0 z-0">
-        <div
-          className={`h-full w-full ${backgroundGradient} flex flex-col items-center justify-center rounded-lg`}
-        >
-          <div
-            className={`absolute inset-0 w-full h-full ${backgroundGradient} z-0 [mask-image:radial-gradient(transparent,white)] pointer-events-none`}
-          />
-          <Boxes /> {/* Add the Boxes component here */}
-        </div>
-      </div>
-
+    <div
+      id="OurEdge"
+      className="relative w-full flex items-center justify-center py-16 bg-[url('/pixels.jpg')] bg-repeat min-h-screen"
+    >
+      {" "}
+      {/* Updated Background */}
       <div className="relative z-10 flex items-center justify-center">
         <motion.div className="bg-[rgb(43,43,43)] opacity-95 rounded-5xl shadow-lg w-[500px] h-[520px] flex items-center justify-center mr-4 mt-10 border-4 border-gray-800">
           <h2 className="text-[100px] px-[120px] font-bold text-black dark:text-neutral-200">

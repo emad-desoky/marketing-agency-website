@@ -1,0 +1,84 @@
+[
+    {
+      "id": "blog1",
+      "title": "4 Dec 2022",
+      "brief": "شركة الفا بيتو للترجمة المعتمدة في مصر والشرق الأوسط",
+      "content": "Full content for blog 1 goes here.",
+      "img1": "/blog10.jpg",
+      "category": "Translation",
+      "views": 150
+    },
+    {
+      "id": "blog2",
+      "title": "1 Dec 2022",
+      "brief": "مسيرة شركة ألفا بيتو للترجمة المعتمدة: من البداية إلى الريادة، محطات بارزة وإنجازات ملهمة",
+      "content": "Full content for blog 2 goes here.",
+      "img1": "/blog10.jpg",
+      "category": "Translation",
+      "views": 200
+    },
+    {
+      "id": "blog3",
+      "title": "1 Dec 2022",
+      "brief": "مسيرة شركة ألفا بيتو للترجمة المعتمدة: من البداية إلى الريادة، محطات بارزة وإنجازات ملهمة",
+      "content": "Full content for blog 2 goes here.",
+      "img1": "/blog10.jpg",
+      "category": "Translation",
+      "views": 200
+    },
+    {
+      "id": "blog4",
+      "title": "1 Dec 2022",
+      "brief": "مسيرة شركة ألفا بيتو للترجمة المعتمدة: من البداية إلى الريادة، محطات بارزة وإنجازات ملهمة",
+      "content": "Full content for blog 2 goes here.",
+      "img1": "/blog10.jpg",
+      "category": "Translation",
+      "views": 200
+    },
+    {
+      "id": "blog5",
+      "title": "1 Dec 2022",
+      "brief": "مسيرة شركة ألفا بيتو للترجمة المعتمدة: من البداية إلى الريادة، محطات بارزة وإنجازات ملهمة",
+      "content": "Full content for blog 2 goes here.",
+      "img1": "/blog10.jpg",
+      "category": "Translation",
+      "views": 200
+    },
+    {
+      "id": "blog6",
+      "title": "1 Dec 2022",
+      "brief": "مسيرة شركة ألفا بيتو للترجمة المعتمدة: من البداية إلى الريادة، محطات بارزة وإنجازات ملهمة",
+      "content": "Full content for blog 2 goes here.",
+      "img1": "/blog10.jpg",
+      "category": "Translation",
+      "views": 200
+    },
+    {
+      "id": "blog7",
+      "title": "1 Dec 2022",
+      "brief": "مسيرة شركة ألفا بيتو للترجمة المعتمدة: من البداية إلى الريادة، محطات بارزة وإنجازات ملهمة",
+      "content": "Full content for blog 2 goes here.",
+      "img1": "/blog10.jpg",
+      "category": "Translation",
+      "views": 200
+    },
+    {
+      "id": "blog8",
+      "title": "2 NOV 2022",
+      "brief": "تطور شركة ألفا بيتو للترجمة المعتمدة: من النشأة إلى التميز، أبرز المحطات والإنجازات البارزة",
+      "content": "Full content for blog 3 goes here.",
+      "img1": "/blog10.jpg",
+      "category": "Translation",
+      "views": 300
+    },
+    {
+      "id": "blog9",
+      "title": "2 NOV 2022",
+      "brief": "تطور شركة ألفا بيتو للترجمة المعتمدة: من النشأة إلى التميز، أبرز المحطات والإنجازات البارزة",
+      "content": "Full content for blog 4 goes here.",
+      "img1": "/blog10.jpg",
+      "category": "Translation",
+      "views": 250
+    }
+  ]
+  

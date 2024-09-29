@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Boxes } from "../ui/background-boxes";
+import { Boxes } from "../ui/background-boxes"; // If you want to keep the boxes effect, otherwise you can remove this import.
 import { cn } from "@/lib/utils";
 
 const ContactDetails: React.FC = () => {
@@ -20,11 +20,8 @@ const ContactDetails: React.FC = () => {
   ];
 
   return (
-    <div className="relative w-full overflow-hidden bg-gradient-to-r from-[rgb(43,43,43)] via-[rgb(255,228,0)] to-[rgb(43,43,43)] flex items-center justify-center py-16">
-      <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-[rgb(43,43,43)] via-[rgb(255,228,0)] to-[rgb(43,43,43)] z-10 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
-      <Boxes className="absolute inset-[-250px] z-0" />
-
-      <div className="relative z-20 flex flex-col md:flex-row w-11/12 lg:w-3/4 xl:w-2/3 bg-[rgb(43,43,43)] rounded-lg shadow-lg overflow-hidden">
+    <div className="relative w-full overflow-hidden bg-[url('/pixels.jpg')] bg-repeat flex items-center justify-center py-16">
+      <div className="relative z-20 flex flex-col md:flex-row w-11/12 lg:w-3/4 xl:w-2/3 bg-[rgba(34,34,34,0.8)] rounded-lg shadow-lg overflow-hidden">
         <div className="w-full md:w-1/4 bg-[rgb(255,228,0)] p-6 flex items-center justify-start md:justify-center">
           <h1 className={cn("text-4xl font-bold text-[rgb(43,43,43)] px-10")}>
             CONTACT DETAILS

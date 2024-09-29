@@ -14,74 +14,65 @@ import { useRouter } from "next/router";
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [scrollY, setScrollY] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const router = useRouter();
 
-  const toggleNavbar = () => {
-    setIsOpen(!isOpen);
-  };
-
-  const handleScroll = () => {
-    setScrollY(window.scrollY);
-  };
-
   useEffect(() => {
+    setIsMounted(true);
+
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
     window.addEventListener("scroll", handleScroll);
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
-  useEffect(() => {
-    // Close the navbar on reload if it was open
-    setIsOpen(false);
-
-    // Fade in effect for the navbar
-    const timer = setTimeout(() => {
-      setIsVisible(true);
-    }, 100); // Adjust delay for smoother effect
-    return () => clearTimeout(timer);
-  }, []);
-
-  const backgroundOpacity = scrollY > 50 ? 1 : 0.5;
-  const backgroundColor = `rgba(43,43,43, ${backgroundOpacity})`;
-  const gradientColor = `rgba(43, 43, 43, ${backgroundOpacity})`;
+  const toggleNavbar = () => setIsOpen(!isOpen);
 
   const handleLinkClick = (link: string) => {
     if (link === "Join Us") {
-      router.push("/join-us"); // Use router for page navigation
+      router.push("/join-us");
     } else if (link === "About Us") {
-      router.push("/about-us"); // Use router for page navigation
+      router.push("/about-us");
     } else {
-      const sectionId = link.replace(/\s+/g, ""); // Remove spaces for ID
+      const sectionId = link.replace(/\s+/g, "");
       const section = document.getElementById(sectionId);
       if (section) {
         section.scrollIntoView({ behavior: "smooth" });
       } else {
-        console.error(`No section found for ID: ${sectionId}`); // Debugging
+        console.error(`No section found for ID: ${sectionId}`);
       }
     }
-    setIsOpen(false); // Close navbar on link click
+    setIsOpen(false);
   };
 
   return (
     <nav
-      className={`fixed w-full flex justify-between items-center p-4 z-50 shadow-md transition-opacity duration-1000 ${
-        isVisible ? "opacity-100" : "opacity-0"
+      className={`sticky top-0 w-full flex justify-between items-center p-4 z-50 shadow-md transition-opacity duration-500 backdrop-blur-md ${
+        isMounted ? "opacity-100" : "opacity-0"
+      } font-nourd ${
+        isScrolled
+          ? "bg-[rgba(43,43,43,1)]" // Fully opaque on scroll
+          : "bg-[rgba(43,43,43,0.7)]" // Semi-transparent when at the top
       }`}
-      style={{
-        background: `linear-gradient(to top, ${backgroundColor}, ${gradientColor})`,
-      }}
+      style={{ height: "80px" }}
     >
-      <div className="flex items-center relative z-10">
-        <Image src="/logo.ico" alt="Logo" width={100} height={100} />
+      {/* Logo */}
+      <div className="flex items-center z-10">
+        <Image src="/logo.ico" alt="Logo" width={150} height={100} />
       </div>
 
-      <div
-        className="md:hidden cursor-pointer relative z-10"
-        onClick={toggleNavbar}
-      >
+      {/* Mobile Menu Icon */}
+      <div className="md:hidden cursor-pointer z-10" onClick={toggleNavbar}>
         {isOpen ? (
           <FaTimes size={24} className="text-black" />
         ) : (
@@ -89,10 +80,11 @@ const Navbar: React.FC = () => {
         )}
       </div>
 
+      {/* Nav Links */}
       <ul
-        className={`flex-col md:flex md:flex-row md:space-x-6 text-black text-sm md:static transition-all duration-300 ease-in-out relative z-10 ${
-          isOpen ? "top-16 left-0 w-full p-4 z-50" : "top-[-200px]"
-        } md:top-0`}
+        className={`flex-col md:flex md:flex-row md:space-x-6 text-black text-sm transition-all duration-300 ease-in-out relative z-10 ${
+          isOpen ? "top-16 left-0 w-full p-4" : "top-[-200px] md:top-0"
+        }`}
       >
         {[
           "Home",
@@ -117,7 +109,8 @@ const Navbar: React.FC = () => {
         ))}
       </ul>
 
-      <div className="hidden md:flex space-x-4 text-black px-8 z-50 relative">
+      {/* Social Media Icons */}
+      <div className="hidden md:flex space-x-4 text-black z-50">
         <FaFacebookF className="cursor-pointer hover:text-gray-400" />
         <FaInstagram className="cursor-pointer hover:text-gray-400" />
         <FaTiktok className="cursor-pointer hover:text-gray-400" />

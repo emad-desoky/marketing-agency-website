@@ -18,8 +18,8 @@ const Partners: React.FC = () => {
         {Array.from({ length: 7 }, (_, clientIndex) => (
           <Image
             key={clientIndex}
-            src={`/client${index * 7 + clientIndex + 1}.png`} // Adjusted the path for 21 images (3 slides)
-            alt={`Client ${index * 7 + clientIndex + 1}`}
+            src={`/client${index * 6 + clientIndex + 1}.png`} // Adjusted the path for 21 images (3 slides)
+            alt={`Client ${index * 6 + clientIndex + 1}`}
             width={100} // Set appropriate width
             height={75} // Set appropriate height
             className="object-cover" // Use object-cover for styling
