@@ -14,8 +14,8 @@ const Partners: React.FC = () => {
   // Create slides data with 7 images per slide
   const slidesData = Array.from({ length: 3 }, (_, index) => (
     <SwiperSlide key={`partners-slide-${index}`}>
-      <div className="grid grid-cols-7 gap-6 p-4">
-        {Array.from({ length: 7 }, (_, clientIndex) => (
+      <div className="grid grid-cols-5 gap-4 p-4">
+        {Array.from({ length: 10 }, (_, clientIndex) => (
           <Image
             key={clientIndex}
             src={`/client${index * 6 + clientIndex + 1}.png`} // Adjusted the path for 21 images (3 slides)
