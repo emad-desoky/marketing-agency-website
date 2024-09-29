@@ -1,13 +1,13 @@
 export const Data = [
   {
     id: "1",
-    image: "/slide1.png",
+    image: "/slide1.PNG",
     title: "TACTICS",
     description: "CREATIVITY-DRIVEN DIGITAL GROWTH",
   },
   {
     id: "2",
-    image: "/slide2.png",
+    image: "/slide2.PNG",
     title: "TACTICS",
     description: "CREATIVITY-DRIVEN DIGITAL GROWTH",
   },
