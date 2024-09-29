@@ -35,7 +35,7 @@ export default function ExpandableCardDemo() {
       {" "}
       {/* Updated Background */}
       <div className="relative z-10 flex items-center justify-center">
-        <motion.div className="bg-[rgb(43,43,43)] opacity-95 rounded-5xl shadow-lg w-[500px] h-[520px] flex items-center justify-center mr-4 mt-10 border-4 border-gray-800">
+        <motion.div className="bg-[rgb(43,43,43)] opacity-95 rounded-5xl shadow-lg w-[500px] h-[520px] flex items-center justify-center mr-4 border-4 border-gray-800">
           <h2 className="text-[100px] px-[120px] font-bold text-black dark:text-neutral-200">
             OUR EDGE
           </h2>
