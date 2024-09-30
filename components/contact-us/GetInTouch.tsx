@@ -22,7 +22,11 @@ const GetInTouch: React.FC = () => {
       <div className="relative z-20 flex flex-col md:flex-row w-11/12 lg:w-3/4 xl:w-2/3 bg-gradient-to-b from-[rgb(0,0,0)] to-[rgb(43,43,43)] rounded-lg shadow-xl overflow-hidden border">
         {/* Title section - 1/4 width */}
         <div className="w-full md:w-1/4 bg-[rgb(255,228,0)]   p-6 flex items-center justify-start md:justify-center">
-          <h1 className={cn("text-4xl font-bold text-black px-10")}>
+          <h1
+            className={cn(
+              "text-4xl font-bold text-black px-10 font-nourd leading-10"
+            )}
+          >
             GET IN TOUCH
           </h1>
         </div>

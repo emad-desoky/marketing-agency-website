@@ -22,7 +22,11 @@ const ContactDetails: React.FC = () => {
     <div className="relative w-full overflow-hidden bg-[url('/pixels.jpg')] bg-repeat flex items-center justify-center py-16">
       <div className="relative z-20 flex flex-col md:flex-row w-11/12 lg:w-3/4 xl:w-2/3 bg-[rgba(34,34,34,0.8)] rounded-lg shadow-lg overflow-hidden">
         <div className="w-full md:w-1/4 bg-[rgb(255,228,0)] p-6 flex items-center justify-start md:justify-center">
-          <h1 className={cn("text-4xl font-bold text-[rgb(43,43,43)] px-10")}>
+          <h1
+            className={cn(
+              "text-4xl font-bold text-[rgb(43,43,43)] px-10 font-nourd leading-[46px]"
+            )}
+          >
             CONTACT DETAILS
           </h1>
         </div>

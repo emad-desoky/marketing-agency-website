@@ -27,7 +27,7 @@ const OurValues: React.FC = () => {
       <div className="relative z-20 flex flex-col md:flex-row w-11/12 lg:w-3/4 xl:w-2/3 bg-gray-900 rounded-lg shadow-lg overflow-hidden">
         {/* Left side (fixed) */}
         <div className="w-full md:w-1/4 bg-[rgb(43,43,43)] border-4 border-gray-950 flex items-center justify-start md:justify-center ">
-          <h1 className="text-[50px] font-bold text-white px-6">
+          <h1 className="text-[50px] font-bold text-white px-12 font-nourd leading-[60px]">
             OUR <span className="text-[rgb(255,228,0)]">VALUES</span>
           </h1>
         </div>

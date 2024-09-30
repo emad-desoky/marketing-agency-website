@@ -35,11 +35,11 @@ const Partners: React.FC = () => {
 
   return (
     <div id="Partners" className="bg-[rgb(43,43,43)] py-12 flex justify-center">
-      <div className="relative z-20 flex flex-col md:flex-row w-11/12 lg:w-3/4 xl:w-2/3 bg-[rgb(43,43,43)] rounded-lg shadow-lg overflow-hidden mt-8">
+      <div className="relative z-20 flex flex-col md:flex-row w-11/12 lg:w-3/4 xl:w-2/3 border-4 border-gray-950 bg-[rgb(43,43,43)] rounded-lg shadow-yellow-300 shadow-xl overflow-hidden mt-8">
         {/* Left side (fixed) */}
-        <div className="bg-[rgb(43,43,43)] p-6 flex items-center justify-start md:justify-center mt-2 mb-2 ml-2 border-4 border-[rgb(255,228,0)]">
+        <div className="bg-[rgb(43,43,43)] p-6 flex font-nourd leading-10 items-center justify-start md:justify-center mt-2 mb-2 ml-2 border-4 border-[rgb(255,228,0)]">
           <h1 className="text-[40px] font-bold text-white">
-            Partners <span className="px-4 text-[rgb(255,228,0)]">of</span>
+            Partners <span className="px-16 text-[rgb(255,228,0)]">of</span>
             <span className="text-[rgb(255,228,0)]"> SUCCESS</span>
           </h1>
         </div>
