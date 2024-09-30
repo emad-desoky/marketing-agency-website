@@ -33,10 +33,10 @@ export default function ExpandableCardDemo() {
   return (
     <div
       id="OurEdge"
-      className="relative w-full flex leading-tight flex-col items-start justify-start py-16 bg-[url('https://t4.ftcdn.net/jpg/03/14/05/87/360_F_314058713_HGBgljEmqYzaepE4RvkcvHl7FybCf94m.jpg')] bg-no-repeat bg-cover bg-left min-h-screen"
+      className="relative w-full flex leading-tight flex-col items-start justify-start py-16 bg-[url('https://img.freepik.com/premium-photo/yellow-wall-background_935395-104890.jpg')] bg-no-repeat bg-cover bg-left min-h-screen"
     >
       <div className="relative z-20 flex items-start justify-start w-full max-w-full px-8">
-        <motion.div className="bg-[rgb(236,189,8)] opacity-95 rounded-5xl shadow-lg w-[500px] h-[300px] flex items-center mt-72 justify-start mr-8 border-4 border-white ">
+        <motion.div className="bg-[rgb(253,181,1)] opacity-95 rounded-5xl shadow-lg w-[500px] h-[300px] flex items-center mt-72 justify-start mr-8 border-4 border-white ">
           <h2 className="text-[110px] ml-20 font-nourd text-black dark:text-neutral-200 ">
             <span className="text-white">OUR</span> EDGE
           </h2>

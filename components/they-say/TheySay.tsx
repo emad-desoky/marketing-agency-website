@@ -13,7 +13,8 @@ const TheySay = () => {
   const slidesData = [
     {
       imgSrc: "/director1.jpg",
-      quote: "“This is an amazing company that transformed our business!”",
+      quote:
+        "“This is an amazing company that transformed our business!This is an amazing company that transformed our business!This is an amazing company that transformed our business!This is an amazing company that transformed our business!This is an amazing company that transformed our business!”",
       name: "John Doe",
       position: "Manager of Innovation",
       company: "TechCorp",
@@ -38,13 +39,13 @@ const TheySay = () => {
   return (
     <div
       id="TheySay"
-      className="bg-gradient-to-r from-[rgb(105,99,40)] via-[rgb(43,43,43)] to-[rgb(43,43,43)] py-24 flex justify-center"
+      className="bg-gradient-to-r from-[rgb(43,43,43)] via-[rgb(43,43,43)] to-[rgb(43,43,43)] py-24 flex justify-center"
     >
-      <div className="relative z-20 flex flex-col md:flex-row w-11/12 lg:w-3/4 xl:w-[1200px] bg-neutral-800 rounded-lg shadow-lg overflow-hidden">
+      <div className="relative z-20 flex flex-col md:flex-row w-11/12 lg:w-3/4 xl:w-[1200px] bg-white border-4 border-black rounded-lg shadow-lg overflow-hidden">
         {/* Left side (fixed) */}
-        <div className="w-full md:w-1/4 bg-[rgb(43,43,43)] p-4 flex items-center justify-start md:justify-center mt-2 mb-2 ml-2">
-          <h1 className="text-5xl font-bold text-[rgb(255,228,0)]">
-            What They Say
+        <div className="w-full md:w-1/4 bg-[rgb(43,43,43)] p-4 flex items-center border-4 border-black justify-start md:justify-center mt-2 mb-2 ml-2">
+          <h1 className="text-5xl font-nourd leading-tight tracking-tight font-bold text-[rgb(255,228,0)]">
+            <span className=" p-10 text-white">WHAT</span> THEY SAY
           </h1>
         </div>
 
@@ -74,17 +75,23 @@ const TheySay = () => {
                   <div className="flex-1">
                     {/* Quote */}
                     <div className="bg-white p-2 rounded-lg border-2 border-[rgb(255,228,0)]">
-                      <p className="text-2xl italic text-black">
+                      <p className="text-2xl italic text-black font-nourd leading-8">
                         {slide.quote}
                       </p>
                     </div>
                   </div>
                 </div>
                 {/* Person Information */}
-                <div className="text-right text-white space-y-2 px-2">
-                  <p className="text-2xl font-semibold">{slide.name}</p>
-                  <p className="text-xl text-white">{slide.position}</p>
-                  <p className="text-xl text-white">{slide.company}</p>
+                <div className="text-right text-black space-y-2 px-2">
+                  <p className="text-2xl font-semibold font-nourd leading-tight tracking-tight">
+                    {slide.name}
+                  </p>
+                  <p className="text-xl text-black font-nourd leading-tight tracking-tight">
+                    {slide.position}
+                  </p>
+                  <p className="text-xl text-black font-nourd leading-tight tracking-tight">
+                    {slide.company}
+                  </p>
                 </div>
               </SwiperSlide>
             ))}
