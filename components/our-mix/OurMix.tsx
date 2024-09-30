@@ -44,8 +44,10 @@ const OurMix = () => {
             />
             {/* Overlay text on hover with yellow background */}
             <div className="absolute inset-0 bg-yellow-500 bg-opacity-75 opacity-0 group-hover:opacity-100 flex flex-col items-center justify-center transition-opacity duration-500">
-              <h3 className="text-white text-lg font-bold">{image.name}</h3>
-              <p className="text-gray-300 text-sm">{image.position}</p>
+              <h3 className="text-white text-lg font-bold mt-40">
+                {image.name}
+              </h3>
+              <p className="text-gray-300text-sm ">{image.position}</p>
             </div>
           </div>
         ))}
@@ -69,7 +71,9 @@ const OurMix = () => {
             />
             {/* Overlay text on hover with yellow background */}
             <div className="absolute inset-0 bg-yellow-500 bg-opacity-75 opacity-0 group-hover:opacity-100 flex flex-col items-center justify-center transition-opacity duration-500">
-              <h3 className="text-white text-lg font-bold">{image.name}</h3>
+              <h3 className="text-white text-lg mt-40 font-bold">
+                {image.name}
+              </h3>
               <p className="text-gray-300 text-sm">{image.position}</p>
             </div>
           </div>
@@ -77,8 +81,10 @@ const OurMix = () => {
 
         {/* "OUR MIX" Box spanning two pictures */}
         <div className="absolute right-2/4 transform -translate-x-1/2 bg-[rgb(43,43,43)] rounded-lg shadow-lg w-[380px] h-full flex flex-col items-center justify-center z-10">
-          <h2 className="text-[88px] font-bold text-white">OUR</h2>
-          <span className="text-[88px] font-bold text-[rgb(255,228,0)]">
+          <h2 className="text-[88px] font-bold text-white font-nourd leading-tight tracking-tight">
+            OUR
+          </h2>
+          <span className="text-[88px] font-bold text-[rgb(255,228,0)] font-nourd tracking-tight leading-tight">
             MIX
           </span>
         </div>
@@ -102,7 +108,9 @@ const OurMix = () => {
             />
             {/* Overlay text on hover with yellow background */}
             <div className="absolute inset-0 bg-[rgb(255,228,0)] bg-opacity-75 opacity-0 group-hover:opacity-100 flex flex-col items-center justify-center transition-opacity duration-500">
-              <h3 className="text-white text-lg font-bold">{image.name}</h3>
+              <h3 className="text-white text-lg font-bold mt-40">
+                {image.name}
+              </h3>
               <p className="text-gray-300 text-sm">{image.position}</p>
             </div>
           </div>
