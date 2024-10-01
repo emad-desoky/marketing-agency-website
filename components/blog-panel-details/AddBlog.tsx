@@ -11,7 +11,7 @@ const ReactQuill = dynamic(() => import("react-quill"), {
   style?: React.CSSProperties;
 }>;
 
-import "react-quill/dist/quill.snow.css"; // Import Quill styles
+import "../node_modules/react-quill/dist/quill.snow.css";
 
 const AddBlog = () => {
   const [title, setTitle] = useState("");
