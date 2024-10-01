@@ -16,17 +16,24 @@ const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
   const router = useRouter();
 
   useEffect(() => {
     setIsMounted(true);
 
     const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setIsScrolled(true);
+      const currentScrollY = window.scrollY;
+
+      // Show/hide navbar based on scroll direction
+      if (currentScrollY > lastScrollY) {
+        setIsScrolled(true); // User is scrolling down
       } else {
-        setIsScrolled(false);
+        setIsScrolled(false); // User is scrolling up
       }
+
+      // Update last scroll position
+      setLastScrollY(currentScrollY);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -34,7 +41,7 @@ const Navbar: React.FC = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [lastScrollY]);
 
   const toggleNavbar = () => setIsOpen(!isOpen);
 
@@ -57,14 +64,14 @@ const Navbar: React.FC = () => {
 
   return (
     <nav
-      className={`sticky top-0 w-full flex justify-between items-center p-4 z-50 shadow-md transition-opacity duration-500 backdrop-blur-md ${
+      className={`fixed top-0 w-full flex justify-between items-center p-4 z-50 shadow-md transition-opacity duration-300 backdrop-blur-md ${
         isMounted ? "opacity-100" : "opacity-0"
       } font-nourd ${
         isScrolled
-          ? "bg-[rgba(43,43,43,1)]" // Fully opaque on scroll
-          : "bg-[rgba(43,43,43,0.7)]" // Semi-transparent when at the top
+          ? "translate-y-[-100%] opacity-0" // Hide navbar on scroll down
+          : "translate-y-0 opacity-100" // Show navbar on scroll up
       }`}
-      style={{ height: "80px" }}
+      style={{ height: "80px" }} // Fixed height to prevent overlap with content
     >
       {/* Logo */}
       <div className="flex items-center z-10">

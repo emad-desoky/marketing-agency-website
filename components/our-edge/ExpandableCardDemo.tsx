@@ -28,16 +28,16 @@ export default function ExpandableCardDemo() {
   useOutsideClick(ref, () => setActive(null));
 
   const cardClass =
-    "relative flex flex-col items-center justify-center cursor-pointer overflow-hidden rounded-3xl shadow-lg border border-neutral-700 dark:border-neutral-800 transition-all duration-300 transform hover:scale-110 hover:shadow-xl bg-opacity-90";
+    "relative flex flex-col items-center justify-center cursor-pointer overflow-hidden rounded-3xl shadow-lg border transition-all duration-300 transform hover:scale-105 hover:shadow-xl bg-opacity-90";
 
   return (
     <div
       id="OurEdge"
-      className="relative w-full flex leading-tight flex-col items-start justify-start py-16 bg-[url('https://img.freepik.com/premium-photo/yellow-wall-background_935395-104890.jpg')] bg-no-repeat bg-cover bg-left min-h-screen"
+      className="relative w-full flex leading-tight flex-col items-start justify-start py-16 bg-[rgb(80,76,73)] min-h-[80px]"
     >
       <div className="relative z-20 flex items-start justify-start w-full max-w-full px-8">
-        <motion.div className="bg-[rgb(253,181,1)] opacity-95 rounded-5xl shadow-lg w-[500px] h-[300px] flex items-center mt-72 justify-start mr-8 border-4 border-white ">
-          <h2 className="text-[110px] ml-20 font-nourd text-black dark:text-neutral-200 ">
+        <motion.div className="bg-[rgb(38,38,38)] border-4 border-[rgb(249,236,155)] shadow-2xl shadow-black opacity-95 rounded-3xl w-[500px] h-[390px] flex items-center justify-center mr-8">
+          <h2 className="text-[110px] font-nourd text-black dark:text-neutral-200 px-24">
             <span className="text-white">OUR</span> EDGE
           </h2>
         </motion.div>
@@ -138,12 +138,12 @@ export default function ExpandableCardDemo() {
           </AnimatePresence>
 
           {/* Cards with updated dimensions */}
-          <ul className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
+          <ul className="grid grid-cols-1 md:grid-cols-4 gap-8 w-full">
             {cards.map((card, index) => {
               const bgColor =
                 (Math.floor(index / 4) + index) % 2 === 0
-                  ? "light-gradient"
-                  : "dark-gradient";
+                  ? "bg-[rgb(253,240,97)] border-t border-[rgb(246,234,129)]"
+                  : "bg-[rgb(35,34,30)] border-b border-[rgb(172,102,0)]";
 
               return (
                 <motion.li
@@ -153,26 +153,26 @@ export default function ExpandableCardDemo() {
                   className={classNames(
                     cardClass,
                     bgColor,
-                    "w-[320px] h-[250px] shadow-2xl shadow-black bg-black"
+                    "w-[180px] h-[180px]" // Updated dimensions for smaller and wider cards
                   )}
                 >
                   <Image
                     src={card.src}
                     alt={card.title}
-                    width={300}
-                    height={150}
+                    width={250} // Updated width for the image
+                    height={125} // Updated height for the image
                     quality={70}
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-                    className="w-full h-50 object-cover transition-opacity duration-300 rounded-3xl"
+                    className="w-full h-32 object-cover transition-opacity duration-300 rounded-3xl"
                     onError={(e) =>
                       (e.currentTarget.src = "/path/to/fallback/image.jpg")
                     } // Error handling
                   />
-                  <div className="relative z-10 flex flex-col items-center p-7">
-                    <h3 className="text-lg font-semibold text-white dark:text-neutral-200 text-center font-nourd leading-tight tracking-tight">
+                  <div className="relative z-10 flex flex-col items-center p-4">
+                    <h3 className="text-lg font-semibold text-black text-center leading-tight tracking-tight">
                       {card.title}
                     </h3>
-                    <p className="text-sm text-[rgb(255,228,0)] font-bold dark:text-neutral-400 leading-tight tracking-tight font-nourd text-center mt-1">
+                    <p className="text-sm text-black font-bold leading-tight tracking-tight text-center mt-1">
                       {card.description}
                     </p>
                   </div>
