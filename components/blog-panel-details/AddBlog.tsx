@@ -1,8 +1,15 @@
 import React, { useState } from "react";
 import dynamic from "next/dynamic"; // Import dynamic for client-side rendering
 
-// Dynamically import the ReactQuill component to avoid SSR issues
-const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
+// Import the ReactQuill module with explicit typing
+const ReactQuill = dynamic(() => import("react-quill"), {
+  ssr: false,
+}) as React.ComponentType<{
+  value: string;
+  onChange: (value: string) => void;
+  className?: string;
+  style?: React.CSSProperties;
+}>;
 
 import "react-quill/dist/quill.snow.css"; // Import Quill styles
 
