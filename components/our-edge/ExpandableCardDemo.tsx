@@ -37,7 +37,7 @@ export default function ExpandableCardDemo() {
     >
       <div className="relative z-20 flex items-start justify-start w-full max-w-full px-8">
         <motion.div className="bg-[rgb(38,38,38)] border-4 border-[rgb(249,236,155)] shadow-2xl shadow-black opacity-95 rounded-3xl w-[500px] h-[390px] flex items-center justify-center mr-8">
-          <h2 className="text-[110px] font-nourd text-black dark:text-neutral-200 px-24">
+          <h2 className="text-[110px] font-nourd text-[rgb(255,228,0)] dark:text-neutral-200 px-24">
             <span className="text-white">OUR</span> EDGE
           </h2>
         </motion.div>
