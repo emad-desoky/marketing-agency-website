@@ -1,17 +1,9 @@
 import React, { useState } from "react";
-import dynamic from "next/dynamic"; // Import dynamic for client-side rendering
+import dynamic from "next/dynamic";
+import "react-quill/dist/quill.snow.css";
 
-// Import the ReactQuill module with explicit typing
-const ReactQuill = dynamic(() => import("react-quill"), {
-  ssr: false,
-}) as React.ComponentType<{
-  value: string;
-  onChange: (value: string) => void;
-  className?: string;
-  style?: React.CSSProperties;
-}>;
-
-import "../node_modules/react-quill/dist/quill.snow.css";
+// Dynamically import React Quill for client-side rendering
+const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 
 const AddBlog = () => {
   const [title, setTitle] = useState("");
@@ -61,12 +53,9 @@ const AddBlog = () => {
             className="block w-full p-3 border border-gray-300 rounded-lg"
           />
           {/* Rich Text Editor for Blog Content */}
-          <ReactQuill
-            value={content}
-            onChange={(value: string) => setContent(value)}
-            className="border border-gray-300 rounded-lg"
-            style={{ minHeight: "200px" }}
-          />
+          <div className="border border-gray-300 rounded-lg min-h-[200px]">
+            <ReactQuill value={content} onChange={setContent} />
+          </div>
           <input
             type="text"
             placeholder="Tags"
@@ -124,7 +113,6 @@ const AddBlog = () => {
         >
           <h3 className="text-xl font-semibold">{title || "Blog Title"}</h3>
           <p className="text-gray-500">{category || "Category"}</p>
-          {/* Display the content from the rich text editor */}
           <div
             dangerouslySetInnerHTML={{
               __html: content || "Content goes here...",
