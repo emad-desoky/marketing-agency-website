@@ -2,9 +2,7 @@ import React, { useState } from "react";
 import dynamic from "next/dynamic"; // Import dynamic for client-side rendering
 
 // Dynamically import the ReactQuill component to avoid SSR issues
-const ReactQuill = dynamic(() => import("react-quill"), {
-  ssr: false, // Disable server-side rendering for this component
-});
+const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 
 import "react-quill/dist/quill.snow.css"; // Import Quill styles
 
@@ -58,9 +56,9 @@ const AddBlog = () => {
           {/* Rich Text Editor for Blog Content */}
           <ReactQuill
             value={content}
-            onChange={setContent}
+            onChange={(value: string) => setContent(value)}
             className="border border-gray-300 rounded-lg"
-            style={{ minHeight: "200px" }} // Setting minimum height for the editor
+            style={{ minHeight: "200px" }}
           />
           <input
             type="text"
