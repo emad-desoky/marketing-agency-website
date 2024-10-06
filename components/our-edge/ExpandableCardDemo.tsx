@@ -76,7 +76,7 @@ export default function ExpandableCardDemo() {
     <div
       id="OurEdge"
       ref={sectionRef}
-      className="relative w-full flex leading-tight flex-col items-start justify-start py-8 bg-[rgb(41,34,34)] min-h-[80px]"
+      className="relative w-full flex leading-tight flex-col items-start justify-start py-8 bg-yellow-800 min-h-[80px]"
     >
       <motion.div
         ref={inViewRef} // Attach the inView ref here

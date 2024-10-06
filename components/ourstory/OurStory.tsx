@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { useRouter } from "next/router";
 import { motion, useAnimation } from "framer-motion";
 
@@ -7,7 +7,6 @@ const OurStory: React.FC = () => {
   const router = useRouter();
   const controls = useAnimation();
   const sectionRef = useRef<HTMLElement>(null);
-  const [hasScrolledToSection, setHasScrolledToSection] = useState(false);
 
   const handleFullStoryClick = () => {
     router.push("/story");
@@ -19,7 +18,6 @@ const OurStory: React.FC = () => {
         const entry = entries[0];
         if (entry.isIntersecting) {
           controls.start("visible");
-          setHasScrolledToSection(true);
         }
       },
       { threshold: 0.1 } // Trigger when 10% of the section is visible
