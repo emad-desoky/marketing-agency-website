@@ -64,9 +64,7 @@ const Navbar: React.FC = () => {
 
   return (
     <nav
-      className={`fixed top-0 w-full flex justify-between items-center p-4 z-50 shadow-md transition-opacity duration-300 backdrop-blur-md ${
-        isMounted ? "opacity-100" : "opacity-0"
-      } font-nourd ${
+      className={`fixed top-0 w-full flex justify-between items-center p-4 z-50 shadow-md transition-opacity duration-300 bg-[rgb(43,43,43)] font-nourd ${
         isScrolled
           ? "translate-y-[-100%] opacity-0" // Hide navbar on scroll down
           : "translate-y-0 opacity-100" // Show navbar on scroll up
@@ -108,7 +106,7 @@ const Navbar: React.FC = () => {
         ].map((link) => (
           <li
             key={link}
-            className="rounded-md px-2 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white cursor-pointer"
+            className="rounded-md px-2 py-2 text-sm font-medium text-white hover:bg-gray-700 hover:text-white cursor-pointer"
             onClick={() => handleLinkClick(link)}
           >
             {link}
@@ -117,7 +115,7 @@ const Navbar: React.FC = () => {
       </ul>
 
       {/* Social Media Icons */}
-      <div className="hidden md:flex space-x-4 text-black z-50">
+      <div className="hidden md:flex space-x-4 text-white z-50">
         <FaFacebookF className="cursor-pointer hover:text-gray-400" />
         <FaInstagram className="cursor-pointer hover:text-gray-400" />
         <FaTiktok className="cursor-pointer hover:text-gray-400" />

@@ -76,7 +76,7 @@ export default function ExpandableCardDemo() {
     <div
       id="OurEdge"
       ref={sectionRef}
-      className="relative w-full flex leading-tight flex-col items-start justify-start py-8 bg-yellow-800 min-h-[80px]"
+      className="relative w-full flex leading-tight flex-col items-start justify-start py-8 bg-gradient-to-b from-[rgba(43,43,43,1)] via-[rgba(58,48,48,0.70)] to-[rgba(41,34,34,1)] min-h-[80px]"
     >
       <motion.div
         ref={inViewRef} // Attach the inView ref here
@@ -223,8 +223,8 @@ export default function ExpandableCardDemo() {
               {cards.map((card, index) => {
                 const bgColor =
                   (Math.floor(index / 4) + index) % 2 === 0
-                    ? "bg-[rgb(253,240,97)] border-t border-[rgb(246,234,129)]"
-                    : "bg-[rgb(35,34,30)] border-b border-[rgb(172,102,0)]";
+                    ? "bg-gradient-to-r from-[rgb(255,221,51)] via-[rgb(255,195,0)] to-[rgb(246,234,129)] border-t border-[rgb(246,234,129)]"
+                    : "bg-gradient-to-r from-[rgb(43,43,43)] via-[rgb(90,70,50)] to-[rgb(255,150,30)] border-b border-[rgb(255,150,30)]";
 
                 return (
                   <motion.li
@@ -254,10 +254,10 @@ export default function ExpandableCardDemo() {
                       } // Error handling
                     />
                     <div className="relative z-10 flex flex-col items-center p-4">
-                      <h3 className="text-lg font-semibold text-blue-600 text-center leading-tight tracking-tight">
+                      <h3 className="text-lg font-semibold text-black text-center leading-tight tracking-tight">
                         {card.title}
                       </h3>
-                      <p className="text-sm text-blue-600 font-bold leading-tight tracking-tight text-center mt-1">
+                      <p className="text-sm text-black font-bold leading-tight tracking-tight text-center mt-1">
                         {card.description}
                       </p>
                     </div>

@@ -22,7 +22,7 @@ export function Button({
 }: {
   borderRadius?: string;
   children: React.ReactNode;
-  as?: unknown;
+  as?: React.ElementType; // Change from unknown to React.ElementType
   containerClassName?: string;
   borderClassName?: string;
   duration?: number;
@@ -56,7 +56,7 @@ export function Button({
 
       <div
         className={cn(
-          "relative bg-[rgb(43,43,43)]/[0.8] border border-slate-800 backdrop-blur-xl text-white flex items-center justify-center w-[500px] h-[390px] text-sm ",
+          "relative bg-gradient-to-r from-[rgba(43,43,43,0.8)] via-[rgba(30,30,30,0.8)] to-[rgba(43,43,43,0.8)] border border-slate-800 backdrop-blur-xl text-white flex items-center justify-center w-[500px] h-[390px] text-sm",
           className
         )}
         style={{

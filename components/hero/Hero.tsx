@@ -19,9 +19,9 @@ const Hero: React.FC = () => {
 
   return (
     <div
-      className={`h-screen w-full transition-opacity duration-1000 ${
+      className={`h-[660px] w-full transition-opacity duration-1000 ${
         isVisible ? "opacity-100" : "opacity-0"
-      }`}
+      } mt-20`} // Push down by the height of the navbar
     >
       <Swiper
         modules={[Navigation, Pagination]}
