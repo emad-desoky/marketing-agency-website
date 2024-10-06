@@ -58,7 +58,7 @@ const Partners: React.FC = () => {
       >
         {/* Left side (fixed) */}
         <motion.div
-          className="bg-[#2B2B2B] py-4 ml-8 rounded-3xl flex font-nourd leading-[70px] items-center justify-start md:justify-center"
+          className="bg-[43,43,43] py-4 ml-8 rounded-3xl flex font-nourd leading-[70px] items-center justify-start md:justify-center"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
