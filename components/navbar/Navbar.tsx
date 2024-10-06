@@ -14,14 +14,11 @@ import { useRouter } from "next/router";
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isMounted, setIsMounted] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const router = useRouter();
 
   useEffect(() => {
-    setIsMounted(true);
-
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
