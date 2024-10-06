@@ -1,5 +1,7 @@
+"use client";
 import React, { useEffect, useState, useRef } from "react";
 import Image from "next/image";
+import { motion, useAnimation } from "framer-motion";
 
 const achievementsData = [
   { title: "sqm Outdoor Signs", target: 50 },
@@ -12,27 +14,43 @@ const achievementsData = [
   { title: "Xlab Family", target: 30 },
 ];
 
-const Achievements = () => {
+const Achievements: React.FC = () => {
   return (
     <div className="bg-[rgb(43,43,43)] p-20 space-y-12">
-      <div className="grid grid-cols-4 gap-12 py-7">
+      <motion.div
+        className="grid grid-cols-2 md:grid-cols-4 gap-12 py-7"
+        initial="hidden"
+        animate="visible"
+        variants={{
+          hidden: { opacity: 0, y: 50 },
+          visible: {
+            opacity: 1,
+            y: 0,
+            transition: { duration: 0.8, staggerChildren: 0.2 },
+          },
+        }}
+      >
         {achievementsData.map((achievement, index) => (
-          <div
+          <motion.div
             key={index}
             className="text-center text-white flex flex-col items-center"
+            variants={{
+              hidden: { opacity: 0, y: 30 },
+              visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+            }}
           >
             <Image
               src="/client2.png" // Correct path to the image
               alt={achievement.title}
-              width={100} // Set desired width
-              height={100} // Set desired height
+              width={100}
+              height={100}
               className="mb-4"
             />
             <Counter target={achievement.target} />
             <h2 className="mt-2 text-lg">{achievement.title}</h2>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };
@@ -41,6 +59,7 @@ const Counter = ({ target }: { target: number }) => {
   const [count, setCount] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
+  const controls = useAnimation();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -48,12 +67,11 @@ const Counter = ({ target }: { target: number }) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setIsVisible(true);
+            controls.start("visible");
           }
         });
       },
-      {
-        threshold: 0.1, // Trigger when 10% of the section is visible
-      }
+      { threshold: 0.2 } // Trigger when 20% of the section is visible
     );
 
     if (ref.current) {
@@ -65,14 +83,14 @@ const Counter = ({ target }: { target: number }) => {
         observer.unobserve(ref.current);
       }
     };
-  }, []);
+  }, [controls]);
 
   useEffect(() => {
     if (isVisible) {
-      let start = 0; // Start from 0
+      let start = 0;
       const end = target;
-      const duration = 2000; // Duration in milliseconds
-      const incrementTime = Math.floor(duration / end); // Update time based on target
+      const duration = 2000; // Animation duration
+      const incrementTime = Math.floor(duration / end);
 
       const interval = setInterval(() => {
         if (start < end) {
@@ -86,10 +104,18 @@ const Counter = ({ target }: { target: number }) => {
   }, [isVisible, target]);
 
   return (
-    <div ref={ref}>
+    <motion.div
+      ref={ref}
+      initial="hidden"
+      animate={controls}
+      variants={{
+        hidden: { opacity: 0 },
+        visible: { opacity: 1, transition: { duration: 0.8 } },
+      }}
+    >
       <h1 className="text-4xl font-bold text-[rgb(255,228,0)]">{count}</h1>{" "}
-      {/* Updated color */}
-    </div>
+      {/* Yellow color for counters */}
+    </motion.div>
   );
 };
 
