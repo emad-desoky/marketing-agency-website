@@ -71,16 +71,19 @@ const TheySay = () => {
       className="bg-gradient-to-r from-[rgb(43,43,43)] via-[rgb(43,43,43)] to-[rgb(43,43,43)] py-24 flex justify-center"
       ref={sectionRef} // Attach ref to the container
     >
-      <div className="relative z-20 flex flex-col md:flex-row w-11/12 lg:w-3/4 xl:w-[1200px] bg-white border-4 border-black rounded-lg shadow-lg overflow-hidden">
+      <div className="relative z-20 flex flex-col md:flex-row w-11/12 lg:w-2/4 xl:w-[1250px] xl:h-[420px] bg-white border-4 border-black rounded-lg shadow-lg overflow-hidden">
         {/* Left side (fixed) */}
         <motion.div
-          className="w-full md:w-1/4 bg-[rgb(43,43,43)] p-4 flex items-center border-4 border-black justify-start md:justify-center mt-2 mb-2 ml-2"
+          className="w-full md:w-2/4 bg-[rgb(43,43,43)] flex items-center border-black justify-start md:justify-center mt-2 mb-2 ml-2"
           initial={{ opacity: 0, x: -100 }}
           animate={isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }} // Trigger based on visibility
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-5xl font-nourd leading-tight tracking-tight font-bold text-[rgb(255,228,0)]">
-            <span className="p-10 text-white">WHAT</span> THEY SAY
+          <h1 className="text-[90px] font-nourd leading-tight tracking-normal text-white p-10">
+            THEY{" "}
+            <span className="text-[rgb(255,228,0)] text-[130px] font-bold">
+              SAY
+            </span>
           </h1>
         </motion.div>
 

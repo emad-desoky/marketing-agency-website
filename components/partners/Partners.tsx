@@ -11,13 +11,13 @@ const Partners: React.FC = () => {
   const slidesData = Array.from({ length: 3 }, (_, index) => (
     <SwiperSlide key={`partners-slide-${index}`}>
       <motion.div
-        className="grid grid-cols-5 gap-6 p-6"
+        className="grid grid-cols-4 gap-1 p-4"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: 30 }}
         transition={{ duration: 0.5 }}
       >
-        {Array.from({ length: 10 }, (_, clientIndex) => (
+        {Array.from({ length: 12 }, (_, clientIndex) => (
           <motion.div
             key={clientIndex}
             whileHover={{
@@ -33,7 +33,7 @@ const Partners: React.FC = () => {
               alt={`Client ${index * 6 + clientIndex + 1}`}
               width={100}
               height={75}
-              className="object-contain opacity-90 transition duration-300"
+              className="object-contain opacity-90 transition duration-300 bg-white"
               sizes="(max-width: 640px) 50px, (max-width: 768px) 75px, 100px"
               quality={75}
               placeholder="blur"
@@ -58,13 +58,13 @@ const Partners: React.FC = () => {
       >
         {/* Left side (fixed) */}
         <motion.div
-          className="bg-[43,43,43] py-4 ml-8 rounded-3xl flex font-nourd leading-[70px] items-center justify-start md:justify-center"
+          className="bg-[rgb(43,43,43)] ml-8 border-4 flex font-nourd leading-[50px] items-center justify-start md:justify-center h-[300px] p-6"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h1 className="text-[60px] font-bold text-white drop-shadow-lg">
-            Partners <span className="px-14">of</span>
+          <h1 className="text-[50px] font-nourd text-white drop-shadow-lg">
+            PARTENRS <span className="px-14 text-[rgb(255,228,0)]">OF</span>
             <span className="text-[#FFE400]"> SUCCESS</span>
           </h1>
         </motion.div>

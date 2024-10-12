@@ -16,9 +16,9 @@ const achievementsData = [
 
 const Achievements: React.FC = () => {
   return (
-    <div className="bg-[rgb(43,43,43)] p-20 space-y-12">
+    <div className="bg-[rgb(43,43,43)] p-24 space-y-12">
       <motion.div
-        className="grid grid-cols-2 md:grid-cols-4 gap-12 py-7"
+        className="grid md:grid-cols-4 gap-20 gap-x-[0px] py-7"
         initial="hidden"
         animate="visible"
         variants={{
@@ -33,7 +33,7 @@ const Achievements: React.FC = () => {
         {achievementsData.map((achievement, index) => (
           <motion.div
             key={index}
-            className="text-center text-white flex flex-col items-center"
+            className="text-center text-white flex font-nourd flex-col items-center"
             variants={{
               hidden: { opacity: 0, y: 30 },
               visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
@@ -42,12 +42,12 @@ const Achievements: React.FC = () => {
             <Image
               src="/client2.png" // Correct path to the image
               alt={achievement.title}
-              width={100}
+              width={150}
               height={100}
-              className="mb-4"
+              className="mb-4 "
             />
             <Counter target={achievement.target} />
-            <h2 className="mt-2 text-lg">{achievement.title}</h2>
+            <h2 className="mt-2 text-[25px]">{achievement.title}</h2>
           </motion.div>
         ))}
       </motion.div>

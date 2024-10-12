@@ -48,7 +48,7 @@ const Hero: React.FC = () => {
                 {item.description}
               </p>
             </div>
-            <button className="absolute bottom-10 right-10 text-[rgb(174,174,174)] font-bold px-6 py-3 border-2 border-[rgb(112,112,112)] rounded-full cursor-pointer text-sm md:text-lg mt-10 hover:text-[rgb(236,137,38)] hover:border-[rgb(236,137,38)] transition-all duration-300 hover:scale-105">
+            <button className="absolute bottom-10 right-10 text-[rgb(174,174,174)] font-bold px-6 py-3 border-2 border-[rgb(112,112,112)] rounded-full cursor-pointer text-sm md:text-lg mt-10 hover:text-[rgb(255,228,0)] hover:border-[rgb(255,228,0)] transition-all duration-300 hover:scale-105">
               Explore Work
             </button>
           </SwiperSlide>
