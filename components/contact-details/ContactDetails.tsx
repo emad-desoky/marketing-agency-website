@@ -2,7 +2,6 @@
 import React from "react";
 import { cn } from "@/lib/utils";
 import { DotBackgroundDemo } from "../test";
-import Map from "@/components/map/Map"; // Import the new Map component
 
 const ContactDetails: React.FC = () => {
   const locations = [
