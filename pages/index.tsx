@@ -22,7 +22,6 @@ const GetInTouch = dynamic(() => import("@/components/contact-us/GetInTouch"));
 export default function Home() {
   return (
     <>
-      {/* Add SEO meta tags here */}
       <Head>
         {/* Title for the home page */}
         <title>
@@ -35,6 +34,12 @@ export default function Home() {
           content="Tactics Digital Agency offers digital marketing services, including SEO, social media, and web design. Elevate your business with our tailored strategies."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        {/* Google site verification */}
+        <meta
+          name="google-site-verification"
+          content="oUEQNkmzLSB3BitCQBE6Nj9GQVJICvjuorsM6J0HIXA"
+        />
 
         {/* Open Graph meta tags */}
         <meta
