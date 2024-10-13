@@ -2,6 +2,7 @@
 import React from "react";
 import { cn } from "@/lib/utils";
 import { DotBackgroundDemo } from "../test";
+import Map from "@/components/map/Map"; // Import the new Map component
 
 const ContactDetails: React.FC = () => {
   const locations = [
@@ -46,7 +47,7 @@ const ContactDetails: React.FC = () => {
                     </div>
                     {index < locations.length - 1 && (
                       <div className="flex items-center justify-center px-2">
-                        <div className="h-16 w-px bg-white"></div>{" "}
+                        <div className="h-16 w-px bg-white"></div>
                         {/* Taller vertical line */}
                       </div>
                     )}
@@ -58,21 +59,7 @@ const ContactDetails: React.FC = () => {
               </p>
             </div>
           </div>
-
-          {/* Google Map Embed Section */}
-          <div className="relative w-full flex justify-center">
-            <iframe
-              title="Google Maps"
-              className="w-11/12 lg:w-3/4 xl:w-2/3 h-96 rounded-lg shadow-lg"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.6217860664206!2d31.381392475390882!3d30.047706674921976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6207ae1f41b8392f%3A0xea05b7fbd5f93b9f!2sTactics%20Digital%20Agency!5e0!3m2!1sen!2seg!4v1728765179712!5m2!1sen!2seg"
-              width="600"
-              height="450"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
+          {/* Map Section */}
         </div>
       </DotBackgroundDemo>
     </>

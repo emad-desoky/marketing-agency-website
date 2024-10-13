@@ -44,7 +44,7 @@ const Achievements: React.FC = () => {
               alt={achievement.title}
               width={150}
               height={100}
-              className="mb-4 "
+              className="mb-4 bg-white"
             />
             <Counter target={achievement.target} />
             <h2 className="mt-2 text-[25px]">{achievement.title}</h2>

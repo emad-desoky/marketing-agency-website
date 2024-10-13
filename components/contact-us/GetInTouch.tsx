@@ -11,6 +11,7 @@ import {
   FaTiktok,
 } from "react-icons/fa"; // Icons for the form and social media
 import Image from "next/image"; // Import the Image component
+import Map from "../contact-details/Map";
 
 const GetInTouch: React.FC = () => {
   return (
@@ -84,7 +85,7 @@ const GetInTouch: React.FC = () => {
           </form>
         </div>
       </div>
-
+      <Map />
       {/* Footer Section */}
       <div className="w-full bg-[rgb(43,43,43)] py-8 flex flex-col items-center">
         {/* Company Logos */}
