@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /private/
-Sitemap: https://tactics-digital-marketing.vercel.app/sitemap.xml
