@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-require-imports */
 import type { Config, PluginAPI } from "tailwindcss/types/config";
 import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette";
 import tailwindcssAnimate from "tailwindcss-animate"; // Replace require with import
@@ -14,8 +13,6 @@ const addVariablesForColors = ({ addBase, theme }: PluginAPI) => {
   });
 };
 import svgToDataUri from "mini-svg-data-uri";
-const {
-} = require("tailwindcss/lib/util/flattenColorPalette");
 
 
 const config: Config = {
