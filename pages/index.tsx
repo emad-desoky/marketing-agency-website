@@ -1,5 +1,5 @@
 import dynamic from "next/dynamic";
-import Head from "next/head"; // Import Head component
+import Head from "next/head";
 
 const Navbar = dynamic(() => import("@/components/navbar/Navbar"));
 const Hero = dynamic(() => import("@/components/hero/Hero"));
@@ -29,10 +29,10 @@ export default function Home() {
           Tactics Digital Agency - Elevate Your Business with Digital Strategy
         </title>
 
-        {/* Meta description to summarize the company and what it offers */}
+        {/* Meta description */}
         <meta
           name="description"
-          content="Tactics Digital Agency provides top-notch digital marketing solutions, including SEO, social media management, and web design to help businesses grow and thrive in the digital age."
+          content="Tactics Digital Agency offers digital marketing services, including SEO, social media, and web design. Elevate your business with our tailored strategies."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -43,7 +43,7 @@ export default function Home() {
         />
         <meta
           property="og:description"
-          content="Discover our innovative digital marketing strategies that help businesses succeed online. From SEO to social media and web design, Tactics Digital Agency is your partner in digital growth."
+          content="Discover digital marketing strategies that help businesses grow. From SEO to social media and web design, Tactics Digital Agency is your partner in success."
         />
         <meta property="og:image" content="/images/hero-banner.jpg" />
         <meta
@@ -60,11 +60,11 @@ export default function Home() {
         />
         <meta
           name="twitter:description"
-          content="Top digital marketing strategies to help your business succeed online. Explore our services in SEO, social media, and web design."
+          content="Explore our digital marketing services, including SEO and web design. Boost your business with Tactics Digital Agency."
         />
         <meta name="twitter:image" content="/images/hero-banner.jpg" />
 
-        {/* Add canonical tag to avoid duplicate content issues */}
+        {/* Canonical URL */}
         <link
           rel="canonical"
           href="https://tactics-digital-marketing.vercel.app/"
