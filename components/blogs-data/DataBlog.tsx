@@ -13,11 +13,14 @@ import {
 } from "react-icons/fa";
 
 interface BlogData {
+  image: string;
   id: string;
   title: string;
-  brief: string;
+  description: string;
+  adminName: string;
+  content: string;
   date: string;
-  img1: string;
+  images: string[];
 }
 
 export function DataBlog() {
@@ -40,7 +43,7 @@ export function DataBlog() {
   }, []);
 
   const filteredBlogs = data.filter((blog) =>
-    blog.title.toLowerCase().includes(searchQuery.toLowerCase())
+    blog.title?.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
   const indexOfLastBlog = currentPage * blogsPerPage;
@@ -54,7 +57,7 @@ export function DataBlog() {
   };
 
   return (
-    <section className="py-16 bg-[rgb(43,43,43)]">
+    <section className="py-16 bg-[rgb(43,43,43)] mt-[90px]">
       <div className="container mx-auto flex gap-6">
         {/* Left Section (Blog Cards with Pagination) */}
         <div className="w-full lg:w-3/4">
@@ -68,18 +71,22 @@ export function DataBlog() {
                 className="transition-transform transform hover:scale-105"
               >
                 <BackgroundGradient className="rounded-[22px] max-w-lg p-6 bg-[rgb(43,43,43)] dark:bg-zinc-900 shadow-lg hover:shadow-xl">
-                  <Image
-                    src={blog.img1}
-                    alt={blog.title}
-                    height="300"
-                    width="500"
-                    className="rounded-t-[22px] object-cover mb-4"
-                  />
+                  {blog.image ? (
+                    <Image
+                      src={blog.image} // Use the first image in the array
+                      alt={blog.title}
+                      height="300"
+                      width="500"
+                    />
+                  ) : (
+                    <p>No image available</p> // Fallback if no image exists
+                  )}
+
                   <p className="text-lg sm:text-xl font-semibold text-white mt-4 mb-1 dark:text-neutral-200">
                     {blog.title}
                   </p>
                   <p className="text-sm text-neutral-300 dark:text-neutral-400 mb-2">
-                    {blog.brief}
+                    {blog.description}
                   </p>
                   <p className="text-xs text-neutral-400 dark:text-neutral-400 mb-4">
                     {blog.date}
@@ -199,25 +206,6 @@ export function DataBlog() {
               className="text-gray-400 hover:text-white"
             >
               <FaPinterestP size={20} />
-            </a>
-          </div>
-
-          {/* Additional Links */}
-          <div className="space-x-6">
-            <a href="#" className="text-gray-400 hover:text-white text-sm">
-              Privacy Policy
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white text-sm">
-              Terms of Service
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white text-sm">
-              Contact Us
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white text-sm">
-              Careers
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white text-sm">
-              FAQs
             </a>
           </div>
         </div>

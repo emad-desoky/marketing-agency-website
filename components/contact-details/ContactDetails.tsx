@@ -22,7 +22,10 @@ const ContactDetails: React.FC = () => {
   return (
     <>
       <DotBackgroundDemo>
-        <div className="relative w-full overflow-hidden flex flex-col items-center justify-center py-16">
+        <div
+          id="ContactDetails"
+          className="relative w-full overflow-hidden flex flex-col items-center justify-center py-16"
+        >
           {/* Contact Details Section */}
           <div className="relative z-20 flex flex-col md:flex-row w-11/12 lg:w-3/4 xl:w-2/3 bg-[rgba(34,34,34,0.8)] rounded-lg shadow-lg overflow-hidden mb-8">
             <div className="w-full md:w-1/4 bg-[rgb(255,228,0)] p-6 flex items-center justify-start md:justify-center">

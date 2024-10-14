@@ -17,7 +17,7 @@ const GetInTouch: React.FC = () => {
   return (
     <div
       id="GetinTouch"
-      className="h-auto w-full bg-[rgb(43,43,43)] flex flex-col items-center justify-center overflow-hidden rounded-md py-10 "
+      className="h-auto w-full bg-[rgb(43,43,43)] flex flex-col items-center justify-center overflow-hidden py-10 "
     >
       {/* Wide Card */}
       <div className="relative z-20 flex flex-col md:flex-row w-11/12 lg:w-3/4 xl:w-2/3 bg-gradient-to-b from-[rgb(0,0,0)] to-[rgb(43,43,43)] rounded-lg shadow-xl overflow-hidden border">

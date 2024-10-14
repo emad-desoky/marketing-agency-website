@@ -17,28 +17,6 @@ const Navbar: React.FC = () => {
   const [isScrolled] = useState(false);
   const router = useRouter();
 
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     const currentScrollY = window.scrollY;
-
-  //     // Show/hide navbar based on scroll direction
-  //     if (currentScrollY > lastScrollY) {
-  //       setIsScrolled(true); // User is scrolling down
-  //     } else {
-  //       setIsScrolled(false); // User is scrolling up
-  //     }
-
-  //     // Update last scroll position
-  //     setLastScrollY(currentScrollY);
-  //   };
-
-  //   window.addEventListener("scroll", handleScroll);
-
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, [lastScrollY]);
-
   const toggleNavbar = () => setIsOpen(!isOpen);
 
   const handleLinkClick = (link: string) => {
@@ -46,6 +24,10 @@ const Navbar: React.FC = () => {
       router.push("/join-us");
     } else if (link === "About Us") {
       router.push("/about-us");
+    } else if (link === "Home") {
+      router.push("/");
+    } else if (link === "Blogs") {
+      router.push("/blogs");
     } else {
       const sectionId = link.replace(/\s+/g, "");
       const section = document.getElementById(sectionId);
@@ -60,16 +42,16 @@ const Navbar: React.FC = () => {
 
   return (
     <nav
-      className={`fixed top-0 w-full flex justify-between items-center p-4 z-50 shadow-md transition-opacity duration-300 bg-[rgb(43,43,43,0.8)] font-nourd ${
+      className={`fixed top-0 w-full flex justify-between items-center px-24 z-50 shadow-md transition-opacity duration-300 bg-[rgb(43,43,43,0.8)] font-nourd ${
         isScrolled
           ? "translate-y-[-100%] opacity-0" // Hide navbar on scroll down
           : "translate-y-0 opacity-100" // Show navbar on scroll up
       }`}
-      style={{ height: "80px" }} // Fixed height to prevent overlap with content
+      style={{ height: "90px" }} // Fixed height to prevent overlap with content
     >
       {/* Logo */}
-      <div className="flex items-center z-10">
-        <Image src="/logo.ico" alt="Logo" width={150} height={100} />
+      <div className="flex items-center z-10 ">
+        <Image src="/logo.ico" alt="Logo" width={200} height={100} />
       </div>
 
       {/* Mobile Menu Icon */}
@@ -92,14 +74,14 @@ const Navbar: React.FC = () => {
           "Our Story",
           "They Say",
           "Partners",
-          "Our Values",
           "Contact Details",
+          "Blogs",
           "Careers",
           "About Us",
         ].map((link) => (
           <li
             key={link}
-            className="rounded-md px-2 py-2 text-sm font-medium text-white hover:bg-[rgb(255,228,0)] hover:text-slate-950 hover:text-white cursor-pointer"
+            className="rounded-md px-2 py-2 text-sm font-medium text-white hover:bg-[rgb(255,228,0)] hover:text-slate-950  cursor-pointer"
             onClick={() => handleLinkClick(link)}
           >
             {link}

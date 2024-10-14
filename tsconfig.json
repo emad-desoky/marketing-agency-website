@@ -16,6 +16,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/blog-panel-details/DashBoard.tsx", "components/blog-panel-details/data.ts", "next-sitemap.config.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/blog-panel-details/DashBoard.tsx", "components/blog-panel-details/data.ts", "next-sitemap.config.js", "components/blog-panel/AddBlog.jsx"],
   "exclude": ["node_modules"]
 }
