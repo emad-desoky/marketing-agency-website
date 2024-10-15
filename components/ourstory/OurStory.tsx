@@ -2,6 +2,7 @@
 import React, { useEffect, useRef } from "react";
 import { useRouter } from "next/router";
 import { motion, useAnimation } from "framer-motion";
+import Image from "next/image";
 import { DotBackgroundDemo } from "../test";
 
 const OurStory: React.FC = () => {
@@ -40,7 +41,7 @@ const OurStory: React.FC = () => {
       <section
         id="OurStory"
         ref={sectionRef}
-        className="relative w-full flex items-center justify-center py-12"
+        className="relative w-full flex items-center justify-center py-20"
       >
         <motion.div
           initial="hidden"
@@ -59,10 +60,10 @@ const OurStory: React.FC = () => {
               hidden: { scale: 0.8 },
               visible: { scale: 1, transition: { duration: 0.8 } },
             }}
-            className="w-full md:w-[380px] bg-[rgb(255,228,0)] h-[300px] p-16  flex items-center justify-center"
+            className="w-full md:w-[380px] bg-[rgb(255,228,0)] h-[300px] p-16 flex items-center justify-center"
           >
             <h1 className="text-[80px] text-[rgb(43,43,43)] font-nourd font-semibold leading-tight">
-              <span className="text-white  text-[105px]">OUR</span> STORY
+              <span className="text-white text-[105px]">OUR</span> STORY
             </h1>
           </motion.div>
 
@@ -101,7 +102,7 @@ const OurStory: React.FC = () => {
               <motion.button
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-[rgb(255,228,0)] text-black py-2 px-4 rounded hover:bg-[rgb(255,228,0)] hover:text-black transition-all"
+                className="bg-[rgb(255,228,0)] text-black py-2 px-4 rounded hover:bg-[rgb(255,228,0)] hover:text-black transition-opacity"
                 aria-label="Read the full story"
                 onClick={handleFullStoryClick}
               >
@@ -110,6 +111,15 @@ const OurStory: React.FC = () => {
             </div>
           </motion.div>
         </motion.div>
+
+        {/* Positioned image on bottom-right */}
+        <Image
+          src="/element1.png"
+          alt="Decorative Element"
+          width={150} // Set desired size
+          height={150}
+          className="absolute bottom-0 right-[-130px] z-10"
+        />
       </section>
     </DotBackgroundDemo>
   );

@@ -1,155 +1,102 @@
+// Cards.js
 export const cards = [
   {
-    description: "Lets make your buisness Grow",
-    title: "Digital Marketing",
-    src: "https://cloudinary.hbs.edu/hbsit/image/upload/s--jcW2HPqC--/f_auto,c_fill,h_375,w_750,/v20200101/EA99CC738B99D0AA67987EC2976D550F.jpg",
-    ctaText: "Visit",
+    title: "Real Estate",
+    description:
+      "Elevate your real estate business with our digital solutions.",
+    src: "/realestate1.jpg",
+    images: [
+      "/realestate1.jpg",
+      "/realestate2.jpg",
+      "/realestate3.jpg",
+      "/realestate4.jpg",
+      "/realestate5.jpg",
+      "/realestate6.jpg",
+      "/realestate7.jpg",
+      "/realestate8.jpg",
+    ],
     ctaLink: "https://ui.aceternity.com/templates",
+    ctaText: "Visit Our Services",
     content: () => (
       <p>
-        Lana Del Rey, an iconic American singer-songwriter, is celebrated for
-        her melancholic and cinematic music style. Born Elizabeth Woolridge
-        Grant in New York City, she has captivated audiences worldwide with her
-        haunting voice and introspective lyrics. <br /> <br /> Her songs often
-        explore themes of tragic romance, glamour, and melancholia, drawing
-        inspiration from both contemporary and vintage pop culture. With a
-        career that has seen numerous critically acclaimed albums, Lana Del Rey
-        has established herself as a unique and influential figure in the music
-        industry, earning a dedicated fan base and numerous accolades.
+        As a leading digital agency, we specialize in providing comprehensive
+        real estate services designed to elevate your business. Our expert team
+        leverages the latest technology and marketing strategies to help you
+        attract, engage, and convert potential clients. Whether you&#39;re
+        looking to enhance your online presence with a stunning website,
+        optimize your listings for search engines, or create targeted digital
+        marketing campaigns, we&#39;ve got you covered. <br /> <br />
+        With a deep understanding of the real estate market, we know what it
+        takes to stand out in a competitive landscape. Our services include
+        property photography, virtual tours, social media management, and
+        effective lead generation strategies tailored to your specific needs.
+        Partner with us to unlock the full potential of your real estate
+        business and watch it thrive in the digital age.
       </p>
     ),
   },
   {
-    description: "Retail Shops Branding",
-    title: "BTL ADVERTISING",
-    src: "/Retail.jpg",
-    ctaText: "Visit",
+    title: "Media Buying",
+    description: "Transform your retail brand with effective media buying.",
+    src: "/media1.jpg",
+    images: [
+      "/media1.jpg",
+      "/media2.jpg",
+      "/media3.jpg",
+      "/media4.jpg",
+      "/media5.jpg",
+      "/media6.jpg",
+      "/media7.jpg",
+      "/media8.jpg",
+      "/media9.jpg",
+      "/media10.jpg",
+      "/media11.jpg",
+      "/media12.jpg",
+      "/media13.jpg",
+      "/media14.jpg",
+      "/media15.jpg",
+      "/media16.jpg",
+      "/media17.jpg",
+    ],
     ctaLink: "https://ui.aceternity.com/templates",
+    ctaText: "Visit",
     content: () => (
       <p>
-        Babu Maan, a legendary Punjabi singer, is renowned for his soulful voice
-        and profound lyrics that resonate deeply with his audience. Born in the
-        village of Khant Maanpur in Punjab, India, he has become a cultural icon
-        in the Punjabi music industry. <br /> <br /> His songs often reflect the
-        struggles and triumphs of everyday life, capturing the essence of
-        Punjabi culture and traditions. With a career spanning over two decades,
-        Babu Maan has released numerous hit albums and singles that have
-        garnered him a massive fan following both in India and abroad.
+        Maximize your brand&#39;s visibility and reach through targeted media
+        buying strategies tailored to your needs.
       </p>
     ),
   },
   {
-    description: "Metallica",
-    title: "For Whom The Bell Tolls",
-    src: "/digital.jpg",
-    ctaText: "Visit",
+    title: "Food & Beverage",
+    description: "Experience culinary excellence with our tailored services.",
+    src: "/food1.jpg",
+    images: ["/food1.jpg", "/food2.jpg", "/food3.jpg", "/food4.jpg"],
     ctaLink: "https://ui.aceternity.com/templates",
+    ctaText: "Visit",
     content: () => (
       <p>
-        Metallica, an iconic American heavy metal band, is renowned for their
-        powerful sound and intense performances that resonate deeply with their
-        audience. Formed in Los Angeles, California, they have become a cultural
-        icon in the heavy metal music industry. <br /> <br /> Their songs often
-        reflect themes of aggression, social issues, and personal struggles,
-        capturing the essence of the heavy metal genre. With a career spanning
-        over four decades, Metallica has released numerous hit albums and
-        singles that have garnered them a massive fan following both in the
-        United States and abroad.
+        We provide comprehensive solutions to elevate your food and beverage
+        business in a competitive market.
       </p>
     ),
   },
   {
-    description: "Lord Himesh",
-    title: "Aap Ka Suroor",
-    src: "/printing.jpg",
-    ctaText: "Visit",
+    title: "Medical",
+    description: "Empowering healthcare through innovative solutions.",
+    src: "/medical1.jpg",
+    images: [
+      "/medical1.jpg",
+      "/medical2.jpg",
+      "/medical3.jpg",
+      "/medical4.jpg",
+    ],
     ctaLink: "https://ui.aceternity.com/templates",
+    ctaText: "Visit",
     content: () => (
       <p>
-        Himesh Reshammiya, a renowned Indian music composer, singer, and actor,
-        is celebrated for his distinctive voice and innovative compositions.
-        Born in Mumbai, India, he has become a prominent figure in the Bollywood
-        music industry. <br /> <br /> His songs often feature a blend of
-        contemporary and traditional Indian music, capturing the essence of
-        modern Bollywood soundtracks. With a career spanning over two decades,
-        Himesh Reshammiya has released numerous hit albums and singles that have
-        garnered him a massive fan following both in India and abroad.
-      </p>
-    ),
-  },
-  {
-    description: "Lord Himesh",
-    title: "Aap Ka Suroor",
-    src: "https://cloudinary.hbs.edu/hbsit/image/upload/s--jcW2HPqC--/f_auto,c_fill,h_375,w_750,/v20200101/EA99CC738B99D0AA67987EC2976D550F.jpg",
-    ctaText: "Visit",
-    ctaLink: "https://ui.aceternity.com/templates",
-    content: () => (
-      <p>
-        Himesh Reshammiya, a renowned Indian music composer, singer, and actor,
-        is celebrated for his distinctive voice and innovative compositions.
-        Born in Mumbai, India, he has become a prominent figure in the Bollywood
-        music industry. <br /> <br /> His songs often feature a blend of
-        contemporary and traditional Indian music, capturing the essence of
-        modern Bollywood soundtracks. With a career spanning over two decades,
-        Himesh Reshammiya has released numerous hit albums and singles that have
-        garnered him a massive fan following both in India and abroad.
-      </p>
-    ),
-  },
-  {
-    description: "Lord Himesh",
-    title: "Aap Ka Suroor",
-    src: "https://cloudinary.hbs.edu/hbsit/image/upload/s--jcW2HPqC--/f_auto,c_fill,h_375,w_750,/v20200101/EA99CC738B99D0AA67987EC2976D550F.jpg",
-    ctaText: "Visit",
-    ctaLink: "https://ui.aceternity.com/templates",
-    content: () => (
-      <p>
-        Himesh Reshammiya, a renowned Indian music composer, singer, and actor,
-        is celebrated for his distinctive voice and innovative compositions.
-        Born in Mumbai, India, he has become a prominent figure in the Bollywood
-        music industry. <br /> <br /> His songs often feature a blend of
-        contemporary and traditional Indian music, capturing the essence of
-        modern Bollywood soundtracks. With a career spanning over two decades,
-        Himesh Reshammiya has released numerous hit albums and singles that have
-        garnered him a massive fan following both in India and abroad.
-      </p>
-    ),
-  },
-  {
-    description: "Lord Himesh",
-    title: "Aap Ka Suroor",
-    src: "https://cloudinary.hbs.edu/hbsit/image/upload/s--jcW2HPqC--/f_auto,c_fill,h_375,w_750,/v20200101/EA99CC738B99D0AA67987EC2976D550F.jpg",
-    ctaText: "Visit",
-    ctaLink: "https://ui.aceternity.com/templates",
-    content: () => (
-      <p>
-        Himesh Reshammiya, a renowned Indian music composer, singer, and actor,
-        is celebrated for his distinctive voice and innovative compositions.
-        Born in Mumbai, India, he has become a prominent figure in the Bollywood
-        music industry. <br /> <br /> His songs often feature a blend of
-        contemporary and traditional Indian music, capturing the essence of
-        modern Bollywood soundtracks. With a career spanning over two decades,
-        Himesh Reshammiya has released numerous hit albums and singles that have
-        garnered him a massive fan following both in India and abroad.
-      </p>
-    ),
-  },
-  {
-    description: "Lord Himesh",
-    title: "Aap Ka Suroor",
-    src: "https://cloudinary.hbs.edu/hbsit/image/upload/s--jcW2HPqC--/f_auto,c_fill,h_375,w_750,/v20200101/EA99CC738B99D0AA67987EC2976D550F.jpg",
-    ctaText: "Visit",
-    ctaLink: "https://ui.aceternity.com/templates",
-    content: () => (
-      <p>
-        Himesh Reshammiya, a renowned Indian music composer, singer, and actor,
-        is celebrated for his distinctive voice and innovative compositions.
-        Born in Mumbai, India, he has become a prominent figure in the Bollywood
-        music industry. <br /> <br /> His songs often feature a blend of
-        contemporary and traditional Indian music, capturing the essence of
-        modern Bollywood soundtracks. With a career spanning over two decades,
-        Himesh Reshammiya has released numerous hit albums and singles that have
-        garnered him a massive fan following both in India and abroad.
+        Our services are designed to enhance patient engagement and streamline
+        healthcare operations.
       </p>
     ),
   },

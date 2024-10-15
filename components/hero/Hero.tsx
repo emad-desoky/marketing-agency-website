@@ -32,23 +32,27 @@ const Hero: React.FC = () => {
       >
         {Data.map((item, index) => (
           <SwiperSlide key={item.id} className="relative w-full h-full">
-            <Image
-              src={item.image}
-              alt={item.title}
-              layout="fill" // Fills the container completely
-              objectFit="cover" // Ensures the image covers the container
-              quality={75} // Optimize image quality for faster loading
-              loading={index === 0 ? "eager" : "lazy"} // Eager load the first image, lazy load the rest
-              priority={index === 0} // Prioritize the first image for faster initial loading
-              className="absolute inset-0"
-            />
-            <div className="absolute bottom-10 left-10 text-white px-6 md:px-16">
-              <h2 className="text-3xl md:text-5xl font-bold">{item.title}</h2>
-              <p className="text-lg md:text-2xl mt-2 text-[rgb(255,228,0)]">
+            <div className="w-full h-full relative">
+              <Image
+                src={item.image}
+                alt={item.title}
+                layout="fill" // Fill the container
+                objectFit="cover" // Ensures the image covers the container
+                quality={75} // Optimize image quality for faster loading
+                loading={index === 0 ? "eager" : "lazy"} // Eager load the first image, lazy load the rest
+                priority={index === 0} // Prioritize the first image for faster initial loading
+                className="absolute inset-0 object-cover" // Ensures the image covers the container responsively
+              />
+            </div>
+            <div className="absolute bottom-10 left-4 md:left-10 text-white px-4 md:px-16">
+              <h2 className="text-2xl md:text-3xl lg:text-5xl font-nourd">
+                {item.title}
+              </h2>
+              <p className="text-md md:text-lg lg:text-2xl mt-2 font-nourd text-[rgb(255,228,0)]">
                 {item.description}
               </p>
             </div>
-            <button className="absolute bottom-10 right-10 text-[rgb(174,174,174)] font-bold px-6 py-3 border-2 border-[rgb(112,112,112)] rounded-full cursor-pointer text-sm md:text-lg mt-10 hover:text-[rgb(255,228,0)] hover:border-[rgb(255,228,0)] transition-all duration-300 hover:scale-105">
+            <button className="absolute bottom-10 right-4 md:right-10 text-[rgb(174,174,174)] font-bold px-4 md:px-6 py-2 md:py-3 border-2 border-[rgb(112,112,112)] rounded-full cursor-pointer text-sm md:text-lg mt-10 hover:text-[rgb(255,228,0)] hover:border-[rgb(255,228,0)] transition-all duration-300 hover:scale-105">
               Explore Work
             </button>
           </SwiperSlide>

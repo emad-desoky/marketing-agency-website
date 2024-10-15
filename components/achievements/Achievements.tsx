@@ -16,9 +16,20 @@ const achievementsData = [
 
 const Achievements: React.FC = () => {
   return (
-    <div className="bg-[rgb(43,43,43)] p-24 space-y-12">
+    <div className="relative bg-[rgb(43,43,43)] p-6 md:p-12 lg:p-24 space-y-12 overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/element4.jpg" // Correct path to the background image
+          alt="Background Element"
+          layout="fill"
+          objectFit="cover" // Ensures the image covers the entire div
+          className="opacity-10" // Adjust opacity as needed
+        />
+      </div>
+
       <motion.div
-        className="grid md:grid-cols-4 gap-20 gap-x-[0px] py-7"
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 md:gap-20 gap-x-[0px] py-7 z-10" // Responsive grid
         initial="hidden"
         animate="visible"
         variants={{
@@ -42,12 +53,15 @@ const Achievements: React.FC = () => {
             <Image
               src="/client2.png" // Correct path to the image
               alt={achievement.title}
-              width={150}
-              height={100}
+              width={100} // Adjusted width for responsiveness
+              height={75} // Adjusted height for responsiveness
               className="mb-4 bg-white"
             />
             <Counter target={achievement.target} />
-            <h2 className="mt-2 text-[25px]">{achievement.title}</h2>
+            <h2 className="mt-2 text-[20px] sm:text-[25px] md:text-[30px]">
+              {achievement.title}
+            </h2>{" "}
+            {/* Responsive font size */}
           </motion.div>
         ))}
       </motion.div>
@@ -113,8 +127,10 @@ const Counter = ({ target }: { target: number }) => {
         visible: { opacity: 1, transition: { duration: 0.8 } },
       }}
     >
-      <h1 className="text-4xl font-bold text-[rgb(255,228,0)]">{count}</h1>{" "}
-      {/* Yellow color for counters */}
+      <h1 className="text-3xl sm:text-4xl font-bold text-[rgb(255,228,0)]">
+        {count}
+      </h1>{" "}
+      {/* Responsive font size */}
     </motion.div>
   );
 };
