@@ -18,9 +18,7 @@ const Hero: React.FC = () => {
   }, []);
 
   return (
-    <div
-      className={`h-[760px] w-full transition-opacity duration-1000`} // Push down by the height of the navbar
-    >
+    <div className="w-full transition-opacity duration-1000">
       <Swiper
         modules={[Navigation, Pagination]}
         pagination={{ clickable: true }}
@@ -29,12 +27,12 @@ const Hero: React.FC = () => {
         className="w-full h-full"
       >
         {Data.map((item, index) => (
-          <SwiperSlide key={item.id} className="relative w-full h-full">
-            <div className="w-full h-full relative">
+          <SwiperSlide key={item.id} className="relative w-full h-auto">
+            <div className="relative w-full  h-[300px] sm:h-[400px] lg:h-[750px]">
               <Image
                 src={item.image}
                 alt={item.title}
-                layout="fill" // Fill the container
+                layout="fill" // Ensures the image fills the container
                 objectFit="cover" // Ensures the image covers the container
                 quality={75} // Optimize image quality for faster loading
                 loading={index === 0 ? "eager" : "lazy"} // Eager load the first image, lazy load the rest

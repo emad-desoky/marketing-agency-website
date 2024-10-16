@@ -118,7 +118,7 @@ const OurStory: React.FC = () => {
           alt="Decorative Element"
           width={150} // Set desired size
           height={150}
-          className="absolute bottom-0 right-[-130px] z-10"
+          className="absolute bottom-0 right-0 z-10 lg:translate-x-28"
         />
       </section>
     </DotBackgroundDemo>
