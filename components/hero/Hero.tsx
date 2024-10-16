@@ -8,7 +8,7 @@ import { Navigation, Pagination } from "swiper/modules";
 import { Data } from "./Data";
 
 const Hero: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [, setIsVisible] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -19,9 +19,7 @@ const Hero: React.FC = () => {
 
   return (
     <div
-      className={`h-[660px] w-full transition-opacity duration-1000 ${
-        isVisible ? "opacity-100" : "opacity-0"
-      } mt-[90px]`} // Push down by the height of the navbar
+      className={`h-[760px] w-full transition-opacity duration-1000`} // Push down by the height of the navbar
     >
       <Swiper
         modules={[Navigation, Pagination]}

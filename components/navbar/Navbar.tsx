@@ -42,10 +42,7 @@ const Navbar: React.FC = () => {
 
   return (
     <nav
-      className={`fixed top-0 w-full flex justify-between items-center px-4 md:px-24 z-50 shadow-md transition-opacity duration-300 bg-[rgb(43,43,43,0.8)] font-nourd ${
-        isScrolled
-          ? "translate-y-[-100%] opacity-0" // Hide navbar on scroll down
-          : "translate-y-0 opacity-100" // Show navbar on scroll up
+      className={`fixed top-0 w-full flex justify-between items-center px-4 md:px-24 z-50 shadow-md transition-opacity duration-300 bg-[rgb(43,43,43,0.14)] font-nourd
       }`}
       style={{ height: "90px" }} // Fixed height to prevent overlap with content
     >

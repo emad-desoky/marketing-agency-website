@@ -10,7 +10,7 @@ import SwiperCore from "swiper";
 SwiperCore.use([Autoplay, Navigation, Pagination]);
 
 const OurValues: React.FC = () => {
-  // Data for 4 images located in the public folder
+  // Data for images located in the public folder
   const slidesData = [
     { src: "/value1.jpg", alt: "value1" },
     { src: "/value2.jpg", alt: "value2" },
@@ -30,12 +30,12 @@ const OurValues: React.FC = () => {
       <div className="relative z-20 flex flex-col md:flex-row w-11/12 lg:w-3/4 xl:w-2/3 bg-gray-900 rounded-lg shadow-lg overflow-hidden">
         {/* Left side (fixed) */}
         <motion.div
-          className="w-full md:w-1/4 bg-[rgb(43,43,43)] border-4 border-gray-950 flex items-center justify-start md:justify-center"
+          className="w-full md:w-1/4 bg-[rgb(43,43,43)] border-4 border-gray-950 flex items-center justify-start md:justify-center p-4"
           initial={{ x: -100, opacity: 0 }} // Initial position and opacity
           animate={{ x: 0, opacity: 1 }} // Final position and opacity
           transition={{ duration: 0.5 }} // Transition duration
         >
-          <h1 className="text-[50px] font-bold text-white px-12 font-nourd leading-[60px]">
+          <h1 className="text-[32px] md:text-[50px] font-bold text-white text-center leading-[40px] md:leading-[60px]">
             OUR <span className="text-[rgb(255,228,0)]">VALUES</span>
           </h1>
         </motion.div>
@@ -47,11 +47,13 @@ const OurValues: React.FC = () => {
             slidesPerView={1} // Show one slide at a time
             autoplay={{ delay: 3000, disableOnInteraction: false }} // Auto scroll
             pagination={{ clickable: true }} // Enable pagination
+            navigation // Enable navigation arrows
+            className="h-[400px] md:h-[500px] lg:h-[400px]" // Adjust height for responsiveness
           >
             {slidesData.map((slide, index) => (
               <SwiperSlide key={index}>
                 <motion.div
-                  className="relative w-full h-[400px] overflow-hidden" // Adjust height as needed
+                  className="relative w-full h-full overflow-hidden" // Ensure full height for the slide
                   initial={{ scale: 1.05 }} // Initial scale for zoom effect
                   whileHover={{ scale: 1.1 }} // Scale on hover for zoom effect
                   transition={{ duration: 0.3 }} // Transition duration for zoom
