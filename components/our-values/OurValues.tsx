@@ -12,10 +12,14 @@ SwiperCore.use([Autoplay, Navigation, Pagination]);
 const OurValues: React.FC = () => {
   // Data for 4 images located in the public folder
   const slidesData = [
-    { src: "/hello.png", alt: "Client 1" },
-    { src: "/hello.png", alt: "Client 2" },
-    { src: "/hello.png", alt: "Client 3" },
-    { src: "/hello.png", alt: "Client 4" },
+    { src: "/value1.jpg", alt: "value1" },
+    { src: "/value2.jpg", alt: "value2" },
+    { src: "/value3.jpg", alt: "value3" },
+    { src: "/value4.jpg", alt: "value4" },
+    { src: "/value5.jpg", alt: "value5" },
+    { src: "/value6.jpg", alt: "value6" },
+    { src: "/value7.jpg", alt: "value7" },
+    { src: "/value8.jpg", alt: "value8" },
   ];
 
   return (
@@ -55,10 +59,9 @@ const OurValues: React.FC = () => {
                   <Image
                     src={slide.src}
                     alt={slide.alt}
-                    objectFit="cover" // Ensures the image covers the container
+                    objectFit="contain" // Ensures the image covers the container
                     quality={100} // Optional: for better image quality
-                    height={5000}
-                    width={5000}
+                    fill
                     className="rounded-lg transition-transform duration-300 ease-in-out" // Rounded corners with transition
                   />
                 </motion.div>

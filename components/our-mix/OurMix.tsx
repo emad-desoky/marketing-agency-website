@@ -24,12 +24,15 @@ const OurMix = () => {
   return (
     <div
       id="OurMix"
-      className="bg-[rgb(43,43,43)] min-h-screen grid grid-cols-8 gap-0 py-10"
+      className="bg-[rgb(43,43,43)] min-h-screen grid grid-cols-8 gap-0 py-10 sm:grid-cols-4 xs:grid-cols-2"
     >
       {/* Row 1 - 6 Images */}
-      <div className="col-span-8 flex h-[300px]">
+      <div className="col-span-8 sm:col-span-4 xs:col-span-2 flex h-[300px] flex-wrap">
         {images.slice(0, 6).map((image, index) => (
-          <div key={index} className="flex-1 relative group">
+          <div
+            key={index}
+            className="flex-1 relative group sm:w-1/2 xs:w-full h-[150px] sm:h-[200px] md:h-[300px]"
+          >
             <Image
               src={image.src}
               alt={`Image ${index + 1}`}
@@ -47,7 +50,7 @@ const OurMix = () => {
               <h3 className="text-black text-lg font-bold mt-40 font-nourd">
                 {image.name}
               </h3>
-              <p className="text-gray-300text-sm font-nourd leading-3">
+              <p className="text-gray-300 text-sm font-nourd leading-3">
                 {image.position}
               </p>
             </div>
@@ -56,9 +59,12 @@ const OurMix = () => {
       </div>
 
       {/* Row 2 - 6 Images with "OUR MIX" Box */}
-      <div className="col-span-8 flex relative h-[300px]">
+      <div className="col-span-8 sm:col-span-4 xs:col-span-2 flex relative h-[300px] flex-wrap">
         {images.slice(6, 12).map((image, index) => (
-          <div key={index} className="flex-1 relative group">
+          <div
+            key={index}
+            className="flex-1 relative group sm:w-1/2 xs:w-full h-[150px] sm:h-[200px] md:h-[300px]"
+          >
             <Image
               src={image.src}
               alt={`Image ${index + 7}`}
@@ -82,20 +88,23 @@ const OurMix = () => {
         ))}
 
         {/* "OUR MIX" Box spanning two pictures */}
-        <div className="absolute right-2/4 transform -translate-x-1/2 bg-[rgb(43,43,43)] rounded-lg shadow-lg w-[380px] h-full flex flex-col items-center justify-center z-10">
-          <h2 className="text-[88px] font-bold text-black font-nourd leading-tight tracking-tight">
+        <div className="absolute right-2/4 transform -translate-x-1/2 bg-[rgb(43,43,43)] rounded-lg shadow-lg w-[300px] sm:w-[350px] md:w-[380px] h-full flex flex-col items-center justify-center z-10">
+          <h2 className="text-[44px] sm:text-[64px] md:text-[88px] font-bold text-black font-nourd leading-tight tracking-tight">
             OUR
           </h2>
-          <span className="text-[88px] font-bold text-[rgb(255,228,0)] font-nourd tracking-tight leading-tight">
+          <span className="text-[44px] sm:text-[64px] md:text-[88px] font-bold text-[rgb(255,228,0)] font-nourd tracking-tight leading-tight">
             MIX
           </span>
         </div>
       </div>
 
       {/* Row 3 - 3 Images */}
-      <div className="col-span-8 flex h-[300px]">
+      <div className="col-span-8 sm:col-span-4 xs:col-span-2 flex h-[300px] flex-wrap">
         {images.slice(12, 15).map((image, index) => (
-          <div key={index} className="flex-1 relative group">
+          <div
+            key={index}
+            className="flex-1 relative group sm:w-1/2 xs:w-full h-[150px] sm:h-[200px] md:h-[300px]"
+          >
             <Image
               src={image.src}
               alt={`Image ${index + 13}`}
