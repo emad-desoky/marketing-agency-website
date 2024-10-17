@@ -71,8 +71,8 @@ export default function Home() {
           name="twitter:image"
           content="https://tactics-digital-agency.vercel.app/logo.jpg" // Full URL for consistency
         />
-        <meta property="twitter:image:width" content="1200" />
-        <meta property="twitter:image:height" content="628" />
+        <meta property="twitter:image:width" content="800" />
+        <meta property="twitter:image:height" content="800" />
 
         <link
           rel="canonical"
