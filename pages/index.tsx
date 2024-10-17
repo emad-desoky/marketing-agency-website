@@ -36,14 +36,14 @@ export default function Home() {
         />
         <meta
           property="og:image"
-          content="/https://marketing-agency-website-psi.vercel.app/logo.jpg"
+          content="https://marketing-agency-website-psi.vercel.app/logo.jpg"
         />
         <meta property="og:type" content="website" />
 
         {/* Twitter */}
         <meta
           name="twitter:card"
-          content="/https://marketing-agency-website-psi.vercel.app/logo.jpg"
+          content="https://marketing-agency-website-psi.vercel.app/logo.jpg"
         />
         <meta name="twitter:title" content="Tactics Digital Agency" />
         <meta
@@ -52,7 +52,7 @@ export default function Home() {
         />
         <meta
           name="twitter:image"
-          content="/https://marketing-agency-website-psi.vercel.app/logo.jpg"
+          content="https://marketing-agency-website-psi.vercel.app/logo.jpg"
         />
       </Head>
 
