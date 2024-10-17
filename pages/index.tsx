@@ -23,60 +23,36 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>
-          Tactics Digital Agency - Elevate Your Business with Digital Strategy
-        </title>
+        <title>Tactics Digital Agency</title>
         <meta
           name="description"
-          content="Tactics Digital Agency offers digital marketing services, including SEO, social media, and web design. Elevate your business with our tailored strategies."
+          content="Tactics Digital Agency for all media buying services"
         />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta
-          name="google-site-verification"
-          content="oUEQNkmzLSB3BitCQBE6Nj9GQVJICvjuorsM6J0HIXA"
-        />
-
-        {/* Open Graph Meta Tags */}
-        <meta
-          property="og:title"
-          content="Tactics Digital Agency - Elevate Your Business"
-        />
+        {/* Open Graph / Facebook */}
+        <meta property="og:title" content="Tactics Digital Agency" />
         <meta
           property="og:description"
-          content="Discover digital marketing strategies that help businesses grow. From SEO to social media and web design, Tactics Digital Agency is your partner in success."
+          content="Tactics Digital Agency for all media buying services"
         />
         <meta
           property="og:image"
-          content="https://tactics-digital-agency.vercel.app/logo.jpg" // Full URL for consistency
-        />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta
-          property="og:url"
-          content="https://tactics-digital-agency.vercel.app/"
+          content="/https://tactics-digital-agency.vercel.app/logo.jpg"
         />
         <meta property="og:type" content="website" />
 
-        {/* Twitter Card Meta Tags */}
-        <meta name="twitter:card" content="summary_large_image" />
+        {/* Twitter */}
         <meta
-          name="twitter:title"
-          content="Tactics Digital Agency - Elevate Your Business"
+          name="twitter:card"
+          content="/https://tactics-digital-agency.vercel.app/logo.jpg"
         />
+        <meta name="twitter:title" content="Tactics Digital Agency" />
         <meta
           name="twitter:description"
-          content="Explore our digital marketing services, including SEO and web design. Boost your business with Tactics Digital Agency."
+          content="Tactics Digital Agency for all media buying services"
         />
         <meta
           name="twitter:image"
-          content="https://tactics-digital-agency.vercel.app/logo.jpg" // Full URL for consistency
-        />
-        <meta property="twitter:image:width" content="800" />
-        <meta property="twitter:image:height" content="800" />
-
-        <link
-          rel="canonical"
-          href="https://tactics-digital-agency.vercel.app/"
+          content="/https://tactics-digital-agency.vercel.app/logo.jpg"
         />
       </Head>
 
