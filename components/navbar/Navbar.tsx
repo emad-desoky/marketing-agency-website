@@ -14,7 +14,6 @@ import { useRouter } from "next/router";
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled] = useState(false);
   const router = useRouter();
 
   const toggleNavbar = () => setIsOpen(!isOpen);
