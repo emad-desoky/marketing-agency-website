@@ -50,7 +50,7 @@ export default function Home() {
           property="og:description"
           content="Discover digital marketing strategies that help businesses grow. From SEO to social media and web design, Tactics Digital Agency is your partner in success."
         />
-        <meta property="og:image" content="/images/hero-banner.jpg" />
+        <meta property="og:image" content="/favicon.ico" />
         <meta
           property="og:url"
           content="https://tactics-digital-marketing.vercel.app/"
