@@ -1,6 +1,5 @@
 import dynamic from "next/dynamic";
 import Head from "next/head";
-import LinkPreview from "@/components/LinkPreview";
 
 const Navbar = dynamic(() => import("@/components/navbar/Navbar"));
 const Hero = dynamic(() => import("@/components/hero/Hero"));
@@ -24,38 +23,43 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Tactics Digital Agency</title>
+        <title>Tactics Digital Agency</title> {/* Set the page title */}
         <meta
           name="description"
-          content="Tactics Digital Agency for all media buying services"
-        />
-        {/* Open Graph / Facebook */}
-        <meta property="og:title" content="Tactics Digital Agency" />
+          content="WELCOME TO OUR DIGITAL AGENCY WE ......."
+        />{" "}
+        {/* Set the page description */}
+        <meta
+          property="og:title"
+          content="TACTICS DIGITAL AGENCY DESCRIPTION ......"
+        />{" "}
+        {/* Open Graph title */}
         <meta
           property="og:description"
-          content="Tactics Digital Agency for all media buying services"
-        />
+          content="A brief description of your page........"
+        />{" "}
+        {/* Open Graph description */}
         <meta
           property="og:image"
-          content="https://tactics-digital-agency.vercel.app/slide1.png"
-        />
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:url"
-          content="https://marketing-agency-website-psi.vercel.app/"
-        />
-
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Tactics Digital Agency" />
+          content="https://plus.unsplash.com/premium_photo-1727279146711-c5be10449b70?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        />{" "}
+        {/* Open Graph image */}
+        <meta property="og:url" content="https://yourwebsite.com" />{" "}
+        {/* Open Graph URL */}
+        <meta name="twitter:card" content="summary_large_image" />{" "}
+        {/* Twitter card type */}
+        <meta name="twitter:title" content="Your Page Title" />{" "}
+        {/* Twitter title */}
         <meta
           name="twitter:description"
-          content="Tactics Digital Agency for all media buying services"
-        />
+          content="A brief description of your page."
+        />{" "}
+        {/* Twitter description */}
         <meta
           name="twitter:image"
-          content="https://tactics-digital-agency.vercel.app/slide1.png"
-        />
+          content="https://plus.unsplash.com/premium_photo-1727279146711-c5be10449b70?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        />{" "}
+        {/* Twitter image */}
       </Head>
 
       <Navbar />
@@ -69,15 +73,6 @@ export default function Home() {
       <OurValues />
       <ContactDetails />
       <GetInTouch />
-      {/* Add the LinkPreview component with props */}
-      <div className="p-4">
-        <LinkPreview
-          title="Tactics Digital Agency"
-          description="Tactics Digital Agency for all media buying services"
-          imageUrl="https://tactics-digital-agency.vercel.app/slide1.png"
-          link="https://tactics-digital-agency.vercel.app/"
-        />
-      </div>
     </>
   );
 }
