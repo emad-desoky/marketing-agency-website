@@ -41,7 +41,7 @@ const Blog = () => {
         <meta name="description" content={blog?.description} />
         <meta
           property="og:image"
-          content={blog?.images[0]} // Full URL for consistency
+          content={blog?.image} // Full URL for consistency
         />
       </Head>
       {blog ? (
