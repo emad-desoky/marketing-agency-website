@@ -299,7 +299,6 @@ export default function ExpandableCardDemo() {
                     overflow: "hidden", // Ensure no content spills over
                   }}
                 ></div>
-                ;
               </ul>
             </div>
           </div>
