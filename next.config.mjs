@@ -7,7 +7,7 @@ const nextConfig = {
       "cloudinary.hbs.edu",
       "images.unsplash.com",
       "images.pexels.com",
-    ],
+    ], // Each domain should be a separate string
   },
   // Other configurations can be added here
 };
