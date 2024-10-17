@@ -26,13 +26,10 @@ export default function Home() {
         <title>Tactics Digital Agency</title> {/* Set the page title */}
         <meta
           name="description"
-          content="WELCOME TO OUR DIGITAL AGENCY WE ......."
+          content="WELCOME TO OUR DIGITAL AGENCY WE"
         />{" "}
         {/* Set the page description */}
-        <meta
-          property="og:title"
-          content="TACTICS DIGITAL AGENCY DESCRIPTION ......"
-        />{" "}
+        <meta property="og:title" content="TACTICS DIGITAL AGENCY." />{" "}
         {/* Open Graph title */}
         <meta
           property="og:description"
