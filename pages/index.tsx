@@ -45,7 +45,7 @@ export default function Home() {
         />
         <meta
           property="og:image"
-          content="/logo.jpg" // Use the correct path to your logo
+          content="https://tactics-digital-marketing.vercel.app/logo.jpg" // Use the correct path to your logo
         />
         <meta
           property="og:url"
@@ -63,7 +63,7 @@ export default function Home() {
         />
         <meta
           name="twitter:image"
-          content="/logo.jpg" // Use the same logo for Twitter
+          content="https://tactics-digital-marketing.vercel.app/logo.jpg" // Use the same logo for Twitter
         />
         <link
           rel="canonical"
