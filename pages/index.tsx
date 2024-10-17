@@ -35,6 +35,8 @@ export default function Home() {
           name="google-site-verification"
           content="oUEQNkmzLSB3BitCQBE6Nj9GQVJICvjuorsM6J0HIXA"
         />
+
+        {/* Open Graph Meta Tags */}
         <meta
           property="og:title"
           content="Tactics Digital Agency - Elevate Your Business"
@@ -45,7 +47,7 @@ export default function Home() {
         />
         <meta
           property="og:image"
-          content="/logo.jpg" // Relative path to your logo
+          content="https://tactics-digital-agency.vercel.app/logo.jpg" // Full URL for consistency
         />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
@@ -54,6 +56,8 @@ export default function Home() {
           content="https://tactics-digital-agency.vercel.app/"
         />
         <meta property="og:type" content="website" />
+
+        {/* Twitter Card Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
@@ -65,10 +69,11 @@ export default function Home() {
         />
         <meta
           name="twitter:image"
-          content="/logo.jpg" // Use the same logo for Twitter
+          content="https://tactics-digital-agency.vercel.app/logo.jpg" // Full URL for consistency
         />
         <meta property="twitter:image:width" content="1200" />
         <meta property="twitter:image:height" content="628" />
+
         <link
           rel="canonical"
           href="https://tactics-digital-agency.vercel.app/"
