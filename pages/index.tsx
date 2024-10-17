@@ -45,11 +45,11 @@ export default function Home() {
         />
         <meta
           property="og:image"
-          content="https://tactics-digital-marketing.vercel.app/logo.jpg" // Use the correct path to your logo
+          content="/logo.jpg" // Relative path to your logo
         />
         <meta
           property="og:url"
-          content="https://tactics-digital-marketing.vercel.app/"
+          content="https://tactics-digital-agency.vercel.app/"
         />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
@@ -63,13 +63,14 @@ export default function Home() {
         />
         <meta
           name="twitter:image"
-          content="https://tactics-digital-marketing.vercel.app/logo.jpg" // Use the same logo for Twitter
+          content="/logo.jpg" // Use the same logo for Twitter
         />
         <link
           rel="canonical"
-          href="https://tactics-digital-marketing.vercel.app/"
+          href="https://tactics-digital-agency.vercel.app/"
         />
       </Head>
+
       <Navbar />
       <Hero />
       <OurStory />
