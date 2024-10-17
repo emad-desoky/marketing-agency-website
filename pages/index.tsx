@@ -45,7 +45,7 @@ export default function Home() {
         />
 
         {/* Twitter */}
-        <meta name="twitter:card" content="summary_small_image" />
+        <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Tactics Digital Agency" />
         <meta
           name="twitter:description"
