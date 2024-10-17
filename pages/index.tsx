@@ -23,25 +23,18 @@ export default function Home() {
   return (
     <>
       <Head>
-        {/* Title for the home page */}
         <title>
           Tactics Digital Agency - Elevate Your Business with Digital Strategy
         </title>
-
-        {/* Meta description */}
         <meta
           name="description"
           content="Tactics Digital Agency offers digital marketing services, including SEO, social media, and web design. Elevate your business with our tailored strategies."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-        {/* Google site verification */}
         <meta
           name="google-site-verification"
           content="oUEQNkmzLSB3BitCQBE6Nj9GQVJICvjuorsM6J0HIXA"
         />
-
-        {/* Open Graph meta tags */}
         <meta
           property="og:title"
           content="Tactics Digital Agency - Elevate Your Business"
@@ -50,14 +43,15 @@ export default function Home() {
           property="og:description"
           content="Discover digital marketing strategies that help businesses grow. From SEO to social media and web design, Tactics Digital Agency is your partner in success."
         />
-        <meta property="og:image" content="/favicon.ico" />
+        <meta
+          property="og:image"
+          content="https://tactics-digital-marketing.vercel.app/images/og-image.jpg"
+        />
         <meta
           property="og:url"
           content="https://tactics-digital-marketing.vercel.app/"
         />
         <meta property="og:type" content="website" />
-
-        {/* Twitter meta tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
@@ -67,15 +61,15 @@ export default function Home() {
           name="twitter:description"
           content="Explore our digital marketing services, including SEO and web design. Boost your business with Tactics Digital Agency."
         />
-        <meta name="twitter:image" content="/images/hero-banner.jpg" />
-
-        {/* Canonical URL */}
+        <meta
+          name="twitter:image"
+          content="https://tactics-digital-marketing.vercel.app/images/hero-banner.jpg"
+        />
         <link
           rel="canonical"
           href="https://tactics-digital-marketing.vercel.app/"
         />
       </Head>
-
       <Navbar />
       <Hero />
       <OurStory />
