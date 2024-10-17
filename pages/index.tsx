@@ -12,6 +12,10 @@ import ContactDetails from "@/components/contact-details/ContactDetails";
 import GetInTouch from "@/components/contact-us/GetInTouch";
 
 export default function Home() {
+  const shareUrl = "https://marketing-agency-website-mu.vercel.app/";
+  const whatsappMessage = encodeURIComponent("Check out our site!");
+  const whatsappLink = `https://api.whatsapp.com/send?text=${whatsappMessage} ${shareUrl}`;
+
   return (
     <>
       <Head>
@@ -26,10 +30,7 @@ export default function Home() {
           property="og:image"
           content="https://plus.unsplash.com/premium_photo-1727279146711-c5be10449b70?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         />
-        <meta
-          property="og:url"
-          content="https://marketing-agency-website-mu.vercel.app/"
-        />
+        <meta property="og:url" content={shareUrl} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Your Page Title" />
         <meta
@@ -53,6 +54,15 @@ export default function Home() {
       <OurValues />
       <ContactDetails />
       <GetInTouch />
+
+      <a
+        href={whatsappLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="share-button"
+      >
+        Share on WhatsApp
+      </a>
     </>
   );
 }
