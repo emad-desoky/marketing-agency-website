@@ -28,6 +28,7 @@ export default function Home() {
           name="description"
           content="Tactics Digital Agency for all media buying services"
         />
+
         {/* Open Graph / Facebook */}
         <meta property="og:title" content="Tactics Digital Agency" />
         <meta
@@ -41,10 +42,7 @@ export default function Home() {
         <meta property="og:type" content="website" />
 
         {/* Twitter */}
-        <meta
-          name="twitter:card"
-          content="https://marketing-agency-website-psi.vercel.app/logo.jpg"
-        />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Tactics Digital Agency" />
         <meta
           name="twitter:description"
