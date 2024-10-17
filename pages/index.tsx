@@ -28,7 +28,6 @@ export default function Home() {
           name="description"
           content="Tactics Digital Agency for all media buying services"
         />
-
         {/* Open Graph / Facebook */}
         <meta property="og:title" content="Tactics Digital Agency" />
         <meta
@@ -69,22 +68,6 @@ export default function Home() {
       <OurValues />
       <ContactDetails />
       <GetInTouch />
-
-      {/* Thumbnail Schema for better WhatsApp previews */}
-      <link
-        itemProp="thumbnailUrl"
-        href="https://marketing-agency-website-psi.vercel.app/slide1.png"
-      />
-      <span
-        itemProp="thumbnail"
-        itemScope
-        itemType="http://schema.org/ImageObject"
-      >
-        <link
-          itemProp="url"
-          href="https://marketing-agency-website-psi.vercel.app/slide1.png"
-        />
-      </span>
     </>
   );
 }
