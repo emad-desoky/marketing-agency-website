@@ -69,14 +69,13 @@ export default function Home() {
       <OurValues />
       <ContactDetails />
       <GetInTouch />
-
-      {/* Add the LinkPreview component */}
+      {/* Add the LinkPreview component with props */}
       <div className="p-4">
         <LinkPreview
           title="Tactics Digital Agency"
           description="Tactics Digital Agency for all media buying services"
-          imageUrl="https://tactics-digital-agency.vercel.app/slide1.png" // Ensure this URL is correct and accessible
-          link="https://marketing-agency-website-psi.vercel.app/"
+          imageUrl="https://tactics-digital-agency.vercel.app/slide1.png"
+          link="https://tactics-digital-agency.vercel.app/"
         />
       </div>
     </>

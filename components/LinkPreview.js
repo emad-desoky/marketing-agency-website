@@ -1,32 +1,30 @@
-// components/LinkPreview.jsx
+// components/LinkPreview.js
 
-import React from "react";
-import Image from "next/image";
+import Link from "next/link";
 
 const LinkPreview = ({ title, description, imageUrl, link }) => {
   return (
-    <a
+    <Link
       href={link}
       target="_blank"
-      rel="noopener noreferrer"
-      className="flex flex-col border border-gray-300 rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105 max-w-md mx-auto"
+      className="text-black w-[50%] h-[200px] cursor-pointer flex items-center bg-[#f3f3f3] gap-3 text-left border-white border-[2px]"
+      style={{
+        textDecoration: "none",
+      }}
     >
-      {/* Image Section */}
-      <div className="relative w-full h-40">
-        <Image
+      <div className="object-cover h-full">
+        <img
           src={imageUrl}
-          alt={title}
-          layout="fill" // This makes the image fill the container
-          objectFit="cover" // Ensures the image covers the entire container without distortion
-          className="transition-transform duration-300 ease-in-out" // Add any transition effects here
+          alt="Link Preview"
+          className="object-cover h-full w-[340px] m-0"
         />
       </div>
-      {/* Content Section */}
-      <div className="p-4 bg-gray-900 text-white">
-        <h3 className="text-xl font-bold">{title}</h3>
-        <p className="mt-2 text-sm">{description}</p>
+      <div className="p-4 w-[60%]">
+        <h3 className="text-3xl font-bold leading-[2rem] mb-2 ">{title}</h3>
+        <p className="text-base line-clamp-3 mb-2 ">{description}</p>
+        <span className="mt-3 opacity-50 text-xs">&nbsp;{link}</span>
       </div>
-    </a>
+    </Link>
   );
 };
 
