@@ -25,7 +25,7 @@ export default function Home() {
         {/* Open Graph title */}
         <meta
           property="og:description"
-          content="A brief description of your page........"
+          content="A brief description of your page"
         />{" "}
         {/* Open Graph description */}
         <meta
