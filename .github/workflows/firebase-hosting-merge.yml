@@ -15,6 +15,6 @@ jobs:
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
-          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_TACTICS_DIGITAL_AGENCY }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_TACTICS_DIGITAL_AGENCY_ACC5D }}
           channelId: live
-          projectId: tactics-digital-agency
+          projectId: tactics-digital-agency-acc5d
