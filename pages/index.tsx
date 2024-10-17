@@ -31,6 +31,9 @@ export default function Home() {
           content="https://plus.unsplash.com/premium_photo-1727279146711-c5be10449b70?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         />
         <meta property="og:url" content={shareUrl} />
+        <meta property="og:type" content="website" /> {/* Added og:type */}
+        <meta property="fb:app_id" content="YOUR_FACEBOOK_APP_ID" />{" "}
+        {/* Replace with your actual App ID */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Your Page Title" />
         <meta
