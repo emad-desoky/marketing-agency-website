@@ -42,8 +42,9 @@ export default function Home() {
         <meta
           property="og:url"
           content="https://marketing-agency-website-psi.vercel.app/"
-        />
-
+        />{" "}
+        {/* Add this line */}
+        {/* Optional, add your app ID if applicable */}
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Tactics Digital Agency" />
