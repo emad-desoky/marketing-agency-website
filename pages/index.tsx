@@ -36,7 +36,7 @@ export default function Home() {
         />
         <meta
           property="og:image"
-          content="https://marketing-agency-website-psi.vercel.app/url.png"
+          content="https://marketing-agency-website-psi.vercel.app/slide1.png"
         />
         <meta property="og:type" content="website" />
         <meta
@@ -55,7 +55,7 @@ export default function Home() {
         />
         <meta
           name="twitter:image"
-          content="https://marketing-agency-website-psi.vercel.app/url.png"
+          content="https://marketing-agency-website-psi.vercel.app/slide1.png"
         />
       </Head>
 
