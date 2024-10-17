@@ -1,5 +1,4 @@
 // components/Blog.tsx
-
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
@@ -39,10 +38,6 @@ const Blog = () => {
       <Head>
         <title>{blog?.title}</title>
         <meta name="description" content={blog?.description} />
-        <meta
-          property="og:image"
-          content={blog?.image} // Full URL for consistency
-        />
       </Head>
       {blog ? (
         <div className="bg-black text-green-600 shadow-lg min-h-dvh max-h-auto">
