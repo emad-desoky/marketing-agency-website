@@ -1,5 +1,6 @@
 import dynamic from "next/dynamic";
 import Head from "next/head";
+import LinkPreview from "@/components/LinkPreview";
 
 const Navbar = dynamic(() => import("@/components/navbar/Navbar"));
 const Hero = dynamic(() => import("@/components/hero/Hero"));
@@ -68,6 +69,16 @@ export default function Home() {
       <OurValues />
       <ContactDetails />
       <GetInTouch />
+
+      {/* Add the LinkPreview component */}
+      <div className="p-4">
+        <LinkPreview
+          title="Tactics Digital Agency"
+          description="Tactics Digital Agency for all media buying services"
+          imageUrl="https://tactics-digital-agency.vercel.app/slide1.png"
+          link="https://marketing-agency-website-psi.vercel.app/"
+        />
+      </div>
     </>
   );
 }
