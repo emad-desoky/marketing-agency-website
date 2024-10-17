@@ -76,7 +76,7 @@ export default function Home() {
           title="Tactics Digital Agency"
           description="Tactics Digital Agency for all media buying services"
           imageUrl="https://tactics-digital-agency.vercel.app/slide1.png"
-          link="https://marketing-agency-website-psi.vercel.app/"
+          link="https://tactics-digital-agency.vercel.app/"
         />
       </div>
     </>
