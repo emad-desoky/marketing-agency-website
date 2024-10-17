@@ -3,6 +3,7 @@
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import Head from "next/head";
 
 interface BlogData {
   id: string;
@@ -35,6 +36,14 @@ const Blog = () => {
 
   return (
     <>
+      <Head>
+        <title>{blog?.title}</title>
+        <meta name="description" content={blog?.description} />
+        <meta
+          property="og:image"
+          content={blog?.images[0]} // Full URL for consistency
+        />
+      </Head>
       {blog ? (
         <div className="bg-black text-green-600 shadow-lg min-h-dvh max-h-auto">
           {/* Admin name and date */}

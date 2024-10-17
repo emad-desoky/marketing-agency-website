@@ -23,6 +23,18 @@ export default function Home() {
   return (
     <>
       <Head>
+        <title>Tactics Digital Agency</title>
+        <meta
+          name="description"
+          content="Tactics Digital Agency offers digital marketing services, including SEO, social media, and web design. Elevate your business with our tailored strategies."
+        />{" "}
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+          name="google-site-verification"
+          content="oUEQNkmzLSB3BitCQBE6Nj9GQVJICvjuorsM6J0HIXA"
+        />
+      </Head>
+      {/* <Head>
         <title>
           Tactics Digital Agency - Elevate Your Business with Digital Strategy
         </title>
@@ -73,7 +85,7 @@ export default function Home() {
           rel="canonical"
           href="https://tactics-digital-agency.vercel.app/"
         />
-      </Head>
+      </Head> */}
 
       <Navbar />
       <Hero />
