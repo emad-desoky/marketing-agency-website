@@ -23,7 +23,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Tactics Digital Agency</title> {/* Set the page title */}
+        <title>Tactics Digital</title> {/* Set the page title */}
         <meta
           name="description"
           content="WELCOME TO OUR DIGITAL AGENCY WE"
